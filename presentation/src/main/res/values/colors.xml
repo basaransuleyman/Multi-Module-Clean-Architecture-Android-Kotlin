@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="md_theme_light_primary">#6750A4</color>
+    <color name="md_theme_light_onPrimary">#FFFFFF</color>
+    <color name="md_theme_light_primaryContainer">#EADDFF</color>
+    <color name="md_theme_light_onPrimaryContainer">#21005D</color>
+    <color name="md_theme_light_error">#B3261E</color>
+    <color name="md_theme_light_onError">#FFFFFF</color>
+    <color name="md_theme_light_errorContainer">#F9DEDC</color>
+    <color name="md_theme_light_onErrorContainer">#410E0B</color>
+    <color name="md_theme_light_surface">#FFFBFE</color>
+    <color name="md_theme_light_onSurface">#1C1B1F</color>
+    <color name="md_theme_light_surfaceVariant">#1E88E5</color>
+    <color name="md_theme_dark_primary">#3949AB</color>
+    <color name="md_theme_dark_onPrimary">#5E35B1</color>
+    <color name="md_theme_dark_primaryContainer">#4F378B</color>
+    <color name="md_theme_dark_onPrimaryContainer">#039BE5</color>
+    <color name="md_theme_dark_secondary">#C0CA33</color>
+    <color name="md_theme_dark_onSecondary">#EEFF41</color>
+    <color name="md_theme_dark_secondaryContainer">#FFC107</color>
+    <color name="md_theme_dark_onSurface">#607D8B</color>
+    <color name="md_theme_dark_surfaceVariant">#49454F</color>
+    <color name="transparent">#00000000</color>
+    <color name="overlay">#99FFFFFF</color>
+</resources>
