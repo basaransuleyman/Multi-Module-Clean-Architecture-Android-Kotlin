@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/flex_box_product_constraint_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginTop="6dp"
+    android:background="@drawable/flex_box_product_bg"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ImageView
+        android:id="@+id/flex_box_product_image_view"
+        android:layout_width="75dp"
+        android:layout_height="35dp"
+        android:layout_marginVertical="12dp"
+        android:scaleType="fitCenter"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"
+        tools:src="@drawable/popup_error_icon" />
+
+    <TextView
+        android:id="@+id/flex_box_product_name_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="12dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="start"
+        android:textColor="@color/md_theme_light_onSurface"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toStartOf="@id/flex_box_product_piece_text_view"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/flex_box_product_image_view"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Product Product Product Product Product" />
+
+    <TextView
+        android:id="@+id/flex_box_product_price_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/md_theme_dark_onPrimary"
+        android:textSize="8sp"
+        app:layout_constraintStart_toStartOf="@+id/flex_box_product_name_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/flex_box_product_name_text_view"
+        tools:text="1399.90 ₺" />
+
+
+    <TextView
+        android:id="@+id/flex_box_product_piece_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:textColor="@color/md_theme_dark_secondaryContainer"
+        android:textSize="8sp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="@+id/flex_box_product_name_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="@+id/flex_box_product_name_text_view"
+        tools:text="139 piece" />
+
+    <View
+        android:id="@+id/flex_box_product_overlay_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginVertical="12dp"
+        android:layout_marginHorizontal="12dp"
+        android:background="@color/overlay"
+        android:clipToPadding="false"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/flex_box_product_sold_out_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:textColor="@color/md_theme_light_error"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flex_box_product_price_text_view"
+        app:layout_goneMarginEnd="12dp"
+        tools:text="Sold Out"
+        tools:visibility="visible" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
