@@ -6,3 +6,26 @@ This project has been crafted with the intention of providing a transparent view
 # Modul Graph 
 
 ![SS1](https://i.ibb.co/CQRQbfq/Screen-Shot-2023-08-10-at-15-05-52.png](https://i.ibb.co/Pc1Tnp4/ezgif-com-resize.png)https://i.ibb.co/Pc1Tnp4/ezgif-com-resize.png)
+
+# Contents & Libraries 
+
+MVVM & MVI 
+Clean Architecture
+Jetpack Compose
+View Binding
+Hilt
+Retrofit
+Navigation Component
+Coroutines
+ViewPager2
+Shimmer
+Modularization
+Material Design
+Espresso
+Mockk
+Glide
+Lottie
+SwipeRefreshLayout
+Flexbox
+
+
