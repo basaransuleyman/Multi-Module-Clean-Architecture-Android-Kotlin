@@ -9,8 +9,8 @@ This project has been crafted with the intention of providing a transparent view
 
 # Contents & Libraries 
 
-MVVM & MVI 
-Clean Architecture
+- MVVM & MVI 
+- Clean Architecture
 Jetpack Compose
 View Binding
 Hilt
