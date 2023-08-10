@@ -11,21 +11,21 @@ This project has been crafted with the intention of providing a transparent view
 
 - MVVM & MVI 
 - Clean Architecture
-Jetpack Compose
-View Binding
-Hilt
-Retrofit
-Navigation Component
-Coroutines
-ViewPager2
-Shimmer
-Modularization
-Material Design
-Espresso
-Mockk
-Glide
-Lottie
-SwipeRefreshLayout
-Flexbox
+- Jetpack Compose
+- View Binding
+- Hilt
+- Retrofit
+- Navigation Component
+- Coroutines
+- ViewPager2
+- Shimmer
+- Modularization
+- Material Design
+- Espresso
+- Mockk
+- Glide
+- Lottie
+- SwipeRefreshLayout
+- Flexbox
 
 
