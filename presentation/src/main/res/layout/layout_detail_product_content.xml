@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <TextView
+        android:id="@+id/product_name_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/md_theme_light_onSurface"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Iphone XS" />
+
+    <TextView
+        android:id="@+id/product_price_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:padding="2dp"
+        android:textColor="@color/md_theme_light_error"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/product_options_recycler_view"
+        app:layout_constraintTop_toBottomOf="@+id/product_options_recycler_view"
+        tools:text="3780 ₺" />
+
+    <TextView
+        android:id="@+id/product_review_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:background="@drawable/review_and_question_bg"
+        android:gravity="center"
+        android:padding="4dp"
+        android:textColor="@color/md_theme_light_onSurface"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/product_question_text_view"
+        app:layout_constraintStart_toEndOf="@+id/product_price_text_view"
+        app:layout_constraintTop_toTopOf="@+id/product_question_text_view"
+        app:layout_constraintVertical_bias="1.0"
+        tools:text="200 Comments" />
+
+    <TextView
+        android:id="@+id/product_question_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="12dp"
+        android:layout_marginStart="12dp"
+        android:background="@drawable/review_and_question_bg"
+        android:gravity="center"
+        android:padding="4dp"
+        android:textColor="@color/md_theme_light_onSurface"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/product_price_text_view"
+        app:layout_constraintStart_toEndOf="@+id/product_review_text_view"
+        app:layout_constraintTop_toTopOf="@+id/product_price_text_view"
+        tools:text="13 Answer" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/product_options_recycler_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="12dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/product_name_text_view"
+        tools:itemCount="12"
+        tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/row_item_product_options" />
+
+    <View
+        android:id="@+id/product_options_bottom_view"
+        android:layout_width="match_parent"
+        android:layout_marginVertical="4dp"
+        android:layout_height="2dp"
+        android:background="@drawable/shadow_below"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/product_options_recycler_view" />
+
+    <TextView
+        android:id="@+id/other_products_section_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/md_theme_light_onSurface"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/product_price_text_view"
+        tools:text="Section Text" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/other_products_recycler_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="5dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/other_products_section_text_view"
+        app:layout_goneMarginTop="12dp"
+        tools:itemCount="12"
+        tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/row_home_slidable_products" />
+</merge>
