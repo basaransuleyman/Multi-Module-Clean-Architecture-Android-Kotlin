@@ -1,5 +1,6 @@
 package com.productapp.presentation.detail
 
+import com.productapp.presentation.common.extension.shareLink
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -80,11 +81,19 @@ class DetailFragment : Fragment() {
             icon = binding.detailShareImageView,
             data = detailItem
         )
+
+        binding.detailShareImageView.setOnClickListener {
+           shareLink(detailItem.share, detailItem.share)
+        }
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    companion object {
+        const val INTENT_SHARE = "text/plain"
     }
 
 }
