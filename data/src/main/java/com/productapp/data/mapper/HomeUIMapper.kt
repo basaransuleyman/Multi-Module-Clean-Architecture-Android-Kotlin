@@ -10,6 +10,7 @@ import com.productapp.data.model.HomeResponse
 import com.productapp.data.model.HomeSection
 import javax.inject.Inject
 
+//TODO: Unit Test
 class HomeUIMapper @Inject constructor() : DataToUIModelMapper<HomeResponse, HomeUIModel> {
     override fun mapToUIModel(responseModel: HomeResponse?): HomeUIModel {
         val homeSectionsAdapterItems = mutableListOf<HomeSectionAdapterItem>()

@@ -68,15 +68,18 @@ class HomeFragment : Fragment() {
                     viewModel.homeFlow.collect {
                         when (it) {
                             is GetHomeEvents.StartShimmer -> {
+                                //TODO:Flow
                                 binding.shimmerViewContainer.show()
                             }
 
                             is GetHomeEvents.Success -> {
+                                //TODO:Flow
                                 binding.shimmerViewContainer.hide()
                                 bindUI()
                             }
 
                             is GetHomeEvents.Failure -> {
+                                //TODO:Flow
                                 fragmentPopup.show(
                                     requireActivity().supportFragmentManager,
                                     ERROR_POP_UP_FRAGMENT_TAG
