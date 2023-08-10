@@ -5,4 +5,4 @@ This project has been crafted with the intention of providing a transparent view
 
 # Arthitectural Graph 
 
-![SS1]([https://i.ibb.co/8bd1JBf/Screen-Shot-2022-03-07-at-10-05.png](https://ibb.co/x6x61Ny)https://ibb.co/x6x61Ny)
+![SS1](https://i.ibb.co/8bd1JBf/Screen-Shot-2022-03-07-at-10-05.png](https://ibb.co/x6x61Ny)https://ibb.co/x6x61Ny)
