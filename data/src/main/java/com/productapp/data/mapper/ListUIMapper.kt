@@ -7,7 +7,6 @@ import com.productapp.data.model.ListProducts
 import com.productapp.data.model.ListResponse
 import javax.inject.Inject
 
-//TODO: Unit Test
 class ListUIMapper @Inject constructor() : DataToUIModelMapper<ListResponse, ListUIModel> {
     override fun mapToUIModel(responseModel: ListResponse?): ListUIModel {
         val domainList = responseModel?.listResponse?.map { fromResponseToDomain(it) }

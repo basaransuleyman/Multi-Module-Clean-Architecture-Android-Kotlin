@@ -7,7 +7,6 @@ import com.productapp.data.model.DetailResponse
 import com.productapp.data.model.OtherProduct
 import javax.inject.Inject
 
-//TODO: Unit Test
 class DetailUIMapper @Inject constructor() : DataToUIModelMapper<DetailResponse, DetailUIModel> {
     override fun mapToUIModel(responseModel: DetailResponse?): DetailUIModel {
         val detailResponse = requireNotNull(responseModel)
