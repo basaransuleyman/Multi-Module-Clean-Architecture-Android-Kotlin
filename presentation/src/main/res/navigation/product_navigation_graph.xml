@@ -14,6 +14,9 @@
         <action
             android:id="@+id/action_homeFragment_to_listFragment"
             app:destination="@id/listFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_multiTypeLazyColumn"
+            app:destination="@id/multiTypeLazyColumn" />
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
@@ -34,4 +37,8 @@
             android:id="@+id/action_listFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
+    <activity
+        android:id="@+id/multiTypeLazyColumn"
+        android:name="com.productapp.presentation.compose.ListLazyColumn"
+        android:label="MultiTypeLazyColumn" />
 </navigation>

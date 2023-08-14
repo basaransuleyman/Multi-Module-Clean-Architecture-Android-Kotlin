@@ -5,7 +5,7 @@ import com.product.common.mapper.UIModel
 data class ListUIModel(
     val productList: List<ListProductsUIModel>?,
     val productLimit: Int?,
-    val  totalCount: Int?
+    val totalCount: Int?
 ) : UIModel
 
 data class ListProductsUIModel(

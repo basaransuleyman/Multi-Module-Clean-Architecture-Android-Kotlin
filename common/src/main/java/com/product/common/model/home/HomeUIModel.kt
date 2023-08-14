@@ -25,7 +25,6 @@ sealed class HomeSectionAdapterItem : UIModel {
         val sectionTitle: String
     ) : HomeSectionAdapterItem()
 
-
     data class FlexBoxProducts(
         override val viewType: Int = VIEW_TYPE_FLEX_BOX_PRODUCTS,
         val productItem: List<ProductItem>,
@@ -37,7 +36,6 @@ sealed class HomeSectionAdapterItem : UIModel {
         val productItem: List<ProductItem>,
         val sectionTitle: String
     ) : HomeSectionAdapterItem()
-
 
     companion object {
         const val VIEW_TYPE_CATALOG = 0
