@@ -9,9 +9,8 @@ This project has been crafted with the intention of providing a transparent view
 
 # Contents & Libraries 
 
-![SS1](https://i.ibb.co/9hTnWy6/Screen-Shot-2023-08-14-at-23-27-35.png)
-
-- MVVM & MVI 
+- MVVM & MVI
+- Modularization & Multi Module
 - Clean Architecture 
 - Jetpack Compose 
 - View Binding 
@@ -21,7 +20,6 @@ This project has been crafted with the intention of providing a transparent view
 - Coroutines 
 - ViewPager2 
 - Shimmer 
-- Modularization 
 - Material Design 
 - Espresso
 - Hilt Android Testing
@@ -34,5 +32,8 @@ This project has been crafted with the intention of providing a transparent view
 - Flexbox
 - Material Components
   
+![SS1](https://i.ibb.co/9hTnWy6/Screen-Shot-2023-08-14-at-23-27-35.png)
+
+ 
 
 
