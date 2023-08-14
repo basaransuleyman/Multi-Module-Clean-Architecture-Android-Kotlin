@@ -5,13 +5,14 @@ This project has been crafted with the intention of providing a transparent view
 
 # Modul Graph 
 
-![SS1](https://i.ibb.co/CQRQbfq/Screen-Shot-2023-08-10-at-15-05-52.png](https://i.ibb.co/Pc1Tnp4/ezgif-com-resize.png)https://i.ibb.co/Pc1Tnp4/ezgif-com-resize.png)
+![SS1](https://i.ibb.co/Zff4Kc9/ezgif-com-resize-3.png)
 
 # Contents & Libraries 
 
-- MVVM & MVI 
+- MVVM & MVI
+- Modularization & Multi Module
 - Clean Architecture 
-- Jetpack Compose 
+- Jetpack Compose
 - View Binding 
 - Hilt 
 - Retrofit
@@ -19,9 +20,9 @@ This project has been crafted with the intention of providing a transparent view
 - Coroutines 
 - ViewPager2 
 - Shimmer 
-- Modularization 
 - Material Design 
 - Espresso
+- Centralize Dependencies( With Version Catalogs )
 - Hilt Android Testing
 - KotlinX Coroutines Test
 - Fragment Testing
@@ -32,5 +33,8 @@ This project has been crafted with the intention of providing a transparent view
 - Flexbox
 - Material Components
   
+![SS1](https://i.ibb.co/9hTnWy6/Screen-Shot-2023-08-14-at-23-27-35.png)
+
+ 
 
 
