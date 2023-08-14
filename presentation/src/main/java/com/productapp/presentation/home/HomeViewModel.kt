@@ -18,7 +18,7 @@ import javax.inject.Inject
 
 //TODO: Unit Test
 @HiltViewModel
-class HomeSharedViewModel @Inject constructor(
+class HomeViewModel @Inject constructor(
     private val getHomeUseCase: GetHomeUseCase
 ) : ViewModel() {
 
@@ -48,5 +48,7 @@ class HomeSharedViewModel @Inject constructor(
                 }
         }
     }
+
+
 
 }

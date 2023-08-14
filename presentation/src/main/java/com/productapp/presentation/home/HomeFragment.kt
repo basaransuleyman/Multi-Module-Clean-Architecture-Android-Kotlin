@@ -25,7 +25,7 @@ import kotlinx.coroutines.launch
 @AndroidEntryPoint
 class HomeFragment : Fragment() {
 
-    private val viewModel: HomeSharedViewModel by activityViewModels()
+    private val viewModel: HomeViewModel by activityViewModels()
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
@@ -114,18 +114,12 @@ class HomeFragment : Fragment() {
         }
     }
 
-    private fun routeActions() {
+    fun routeActions() {
         homeAdapter?.homeBannerClickListener { route ->
-            when (route) {
-                ROUTE_TO_DETAIL -> {
-                    navController.navigate(R.id.detailFragment)
-                }
-                ROUTE_TO_LIST -> {
-                    navController.navigate(R.id.listFragment)
-                }
-                ROUTE_TO_COMPOSE_MULTI_TYPE_LAZY_COLUMN -> {
-                    navController.navigate(R.id.multiTypeLazyColumn)
-                }
+            if (route == ROUTE_TO_DETAIL) {
+                navController.navigate(R.id.detailFragment)
+            } else if (route == ROUTE_TO_LIST) {
+                navController.navigate(R.id.listFragment)
             }
         }
     }
@@ -139,7 +133,6 @@ class HomeFragment : Fragment() {
         const val ERROR_POP_UP_FRAGMENT_TAG = "error_popup_fragment"
         const val ROUTE_TO_DETAIL = "101"
         const val ROUTE_TO_LIST = "102"
-        const val ROUTE_TO_COMPOSE_MULTI_TYPE_LAZY_COLUMN = "103"
     }
 
 }
