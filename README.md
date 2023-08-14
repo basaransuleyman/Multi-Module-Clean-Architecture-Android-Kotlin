@@ -14,19 +14,23 @@ This project has been crafted with the intention of providing a transparent view
 - Jetpack Compose 
 - View Binding 
 - Hilt 
-- Retrofit 
+- Retrofit
 - Navigation Component 
 - Coroutines 
 - ViewPager2 
 - Shimmer 
 - Modularization 
 - Material Design 
-- Espresso 
+- Espresso
+- Hilt Android Testing
+- KotlinX Coroutines Test
+- Fragment Testing
 - Mockk 
 - Glide 
 - Lottie 
 - SwipeRefreshLayout 
-- Flexbox 
+- Flexbox
+- Material Components
+  
 
 
-# Dependency Injection
