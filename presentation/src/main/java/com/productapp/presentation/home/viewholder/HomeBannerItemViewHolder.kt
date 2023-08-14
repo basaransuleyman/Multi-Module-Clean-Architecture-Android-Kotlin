@@ -13,7 +13,7 @@ class HomeBannerItemViewHolder(private val binding: RowHomeBannerItemBinding) :
         bannerClick(clickListener, bannerItem)
     }
 
-    fun bannerClick(clickListener: ((String?) -> Unit)?, bannerItem: BannerItem) {
+    private fun bannerClick(clickListener: ((String?) -> Unit)?, bannerItem: BannerItem) {
         binding.bannerCardView.setOnClickListener {
             clickListener?.invoke(
                 bannerItem.navigationData

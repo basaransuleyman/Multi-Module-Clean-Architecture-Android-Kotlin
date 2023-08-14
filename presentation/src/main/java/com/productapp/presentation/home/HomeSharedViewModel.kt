@@ -16,9 +16,8 @@ import kotlinx.coroutines.launch
 import java.io.IOException
 import javax.inject.Inject
 
-//TODO: Unit Test
 @HiltViewModel
-class HomeViewModel @Inject constructor(
+class HomeSharedViewModel @Inject constructor(
     private val getHomeUseCase: GetHomeUseCase
 ) : ViewModel() {
 

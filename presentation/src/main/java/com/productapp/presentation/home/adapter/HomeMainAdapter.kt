@@ -6,14 +6,17 @@ import com.product.common.model.home.HomeSectionAdapterItem
 import com.product.common.model.home.HomeSectionAdapterItem.Companion.VIEW_TYPE_BANNER
 import com.product.common.model.home.HomeSectionAdapterItem.Companion.VIEW_TYPE_FLEX_BOX_PRODUCTS
 import com.product.common.model.home.HomeSectionAdapterItem.Companion.VIEW_TYPE_SLIDABLE_PRODUCTS
+import com.product.common.model.home.HomeSectionAdapterItem.Companion.VIEW_TYPE_VERTICAL_PRODUCTS
 import com.product.sideapp.home.databinding.RowHomeBannerBinding
 import com.product.sideapp.home.databinding.RowHomeFlexBoxProductsBinding
 import com.product.sideapp.home.databinding.RowHomeSlidableProductsBinding
+import com.product.sideapp.home.databinding.RowHomeVerticalProductsBinding
 import com.productapp.presentation.common.extension.viewBinding
 import com.productapp.presentation.home.viewholder.EmptyViewHolder
 import com.productapp.presentation.home.viewholder.HomeBannerViewHolder
 import com.productapp.presentation.home.viewholder.HomeFlexBoxProductsViewHolder
 import com.productapp.presentation.home.viewholder.HomeSlidableProductsViewHolder
+import com.productapp.presentation.home.viewholder.HomeVerticalProductsViewHolder
 
 class HomeMainAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
@@ -36,12 +39,6 @@ class HomeMainAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return when (viewType) {
 
-            /* VIEW_TYPE_CATALOG -> {
-
-             }
-
-             */
-
             VIEW_TYPE_BANNER -> {
                 HomeBannerViewHolder(
                     parent.viewBinding(RowHomeBannerBinding::inflate),
@@ -63,11 +60,11 @@ class HomeMainAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
                 )
             }
 
-            /*
-       VIEW_TYPE_VERTICAL_PRODUCTS -> {
-           EmptyViewHolder.getEmptyViewHolder(parent)
-       }
-        */
+            VIEW_TYPE_VERTICAL_PRODUCTS -> {
+                HomeVerticalProductsViewHolder(
+                    parent.viewBinding(RowHomeVerticalProductsBinding::inflate)
+                )
+            }
 
             else -> {
                 EmptyViewHolder.getEmptyViewHolder(parent)
@@ -97,6 +94,12 @@ class HomeMainAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
             is HomeBannerViewHolder -> {
                 (currentSectionPosition as? HomeSectionAdapterItem.Banner)?.let {
                     holder.bind(it.bannerItem)
+                }
+            }
+
+            is HomeVerticalProductsViewHolder -> {
+                (currentSectionPosition as? HomeSectionAdapterItem.VerticalProducts)?.let {
+                    holder.bind(it.productItem, it.sectionTitle)
                 }
             }
         }

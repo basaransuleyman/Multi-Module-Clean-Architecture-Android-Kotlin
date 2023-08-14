@@ -22,4 +22,5 @@
     <color name="md_theme_dark_surfaceVariant">#49454F</color>
     <color name="transparent">#00000000</color>
     <color name="overlay">#99FFFFFF</color>
+    <color name="dim_color">#80000000</color>
 </resources>

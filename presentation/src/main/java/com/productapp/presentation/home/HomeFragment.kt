@@ -25,7 +25,7 @@ import kotlinx.coroutines.launch
 @AndroidEntryPoint
 class HomeFragment : Fragment() {
 
-    private val viewModel: HomeViewModel by activityViewModels()
+    private val viewModel: HomeSharedViewModel by activityViewModels()
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
@@ -68,18 +68,15 @@ class HomeFragment : Fragment() {
                     viewModel.homeFlow.collect {
                         when (it) {
                             is GetHomeEvents.StartShimmer -> {
-                                //TODO:Flow
                                 binding.shimmerViewContainer.show()
                             }
 
                             is GetHomeEvents.Success -> {
-                                //TODO:Flow
                                 binding.shimmerViewContainer.hide()
                                 bindUI()
                             }
 
                             is GetHomeEvents.Failure -> {
-                                //TODO:Flow
                                 fragmentPopup.show(
                                     requireActivity().supportFragmentManager,
                                     ERROR_POP_UP_FRAGMENT_TAG
@@ -114,12 +111,18 @@ class HomeFragment : Fragment() {
         }
     }
 
-    fun routeActions() {
+    private fun routeActions() {
         homeAdapter?.homeBannerClickListener { route ->
-            if (route == ROUTE_TO_DETAIL) {
-                navController.navigate(R.id.detailFragment)
-            } else if (route == ROUTE_TO_LIST) {
-                navController.navigate(R.id.listFragment)
+            when (route) {
+                ROUTE_TO_DETAIL -> {
+                    navController.navigate(R.id.detailFragment)
+                }
+                ROUTE_TO_LIST -> {
+                    navController.navigate(R.id.listFragment)
+                }
+                ROUTE_TO_COMPOSE_MULTI_TYPE_LAZY_COLUMN -> {
+                    navController.navigate(R.id.listLazyColumn)
+                }
             }
         }
     }
@@ -133,6 +136,7 @@ class HomeFragment : Fragment() {
         const val ERROR_POP_UP_FRAGMENT_TAG = "error_popup_fragment"
         const val ROUTE_TO_DETAIL = "101"
         const val ROUTE_TO_LIST = "102"
+        const val ROUTE_TO_COMPOSE_MULTI_TYPE_LAZY_COLUMN = "103"
     }
 
 }

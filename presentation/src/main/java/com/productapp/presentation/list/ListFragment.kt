@@ -59,6 +59,7 @@ class ListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         viewModel.getList()
         bindInitialUI()
+        routeActions()
         initVMObservers()
 
         findNavController().let {
@@ -135,6 +136,16 @@ class ListFragment : Fragment() {
         }
     }
 
+    private fun routeActions() {
+        listAdapter?.listProductItemClickListener { route ->
+            when (route) {
+                PRODUCT_ID -> {
+                    navController.navigate(R.id.detailBottomSheetFragment)
+                }
+            }
+        }
+    }
+
     private fun showLottie() {
         binding.animationLoadingLottieView.apply {
             bringToFront()
@@ -168,5 +179,6 @@ class ListFragment : Fragment() {
     companion object {
         const val PRODUCT_LIMIT = 8
         const val TOTAL_COUNT = 16
+        const val PRODUCT_ID = "1004"
     }
 }

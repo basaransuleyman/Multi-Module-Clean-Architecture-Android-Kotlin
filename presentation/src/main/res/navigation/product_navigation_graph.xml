@@ -14,6 +14,9 @@
         <action
             android:id="@+id/action_homeFragment_to_listFragment"
             app:destination="@id/listFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_listLazyColumn"
+            app:destination="@id/listLazyColumn" />
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
@@ -33,5 +36,20 @@
         <action
             android:id="@+id/action_listFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_detailBottomSheetFragment"
+            app:destination="@id/detailBottomSheetFragment" />
     </fragment>
+    <activity
+        android:id="@+id/listLazyColumn"
+        android:name="com.productapp.presentation.compose.ListLazyColumn"
+        android:label="ListLazyColumn" />
+    <dialog
+        android:id="@+id/detailBottomSheetFragment"
+        android:name="com.productapp.presentation.detail.bottomsheet.DetailBottomSheetFragment"
+        android:label="" >
+        <action
+            android:id="@+id/action_detailBottomSheetFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </dialog>
 </navigation>

@@ -7,10 +7,17 @@ import com.product.common.model.list.ListProductsUIModel
 import com.product.sideapp.home.databinding.ListProductItemBinding
 import com.productapp.presentation.common.extension.setImageUrl
 
-class ProductListAdapter : RecyclerView.Adapter<ProductListAdapter.ProductListViewHolder>() {
+class ProductListAdapter() :
+    RecyclerView.Adapter<ProductListAdapter.ProductListViewHolder>() {
 
     private var productList: ArrayList<ListProductsUIModel> = arrayListOf()
 
+
+    private var clickListener: ((String?) -> Unit)? = null
+
+    fun listProductItemClickListener(productItemClickListener: ((String?) -> Unit)?) {
+        clickListener = productItemClickListener
+    }
     fun updateProductList(itemList: List<ListProductsUIModel>?) {
         itemList?.let {
             productList.addAll(it)
@@ -32,12 +39,12 @@ class ProductListAdapter : RecyclerView.Adapter<ProductListAdapter.ProductListVi
 
     override fun onBindViewHolder(holder: ProductListViewHolder, position: Int) {
         val product = productList[position]
-        holder.bind(product)
+        holder.bind(product, clickListener)
     }
 
     inner class ProductListViewHolder(private val binding: ListProductItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(product: ListProductsUIModel) {
+        fun bind(product: ListProductsUIModel, clickListener: ((String?) -> Unit)?) {
             with(binding) {
                 product.apply {
                     listProductImageView.setImageUrl(productImage)
@@ -46,6 +53,11 @@ class ProductListAdapter : RecyclerView.Adapter<ProductListAdapter.ProductListVi
                     listProductQuestionTextView.text = questions
                     listProductRatingTextView.text = rating
                     listProductReviewTextView.text = review
+                }
+                binding.rootConstraintLayout.setOnClickListener {
+                    clickListener?.invoke(
+                        product.productId
+                    )
                 }
             }
         }

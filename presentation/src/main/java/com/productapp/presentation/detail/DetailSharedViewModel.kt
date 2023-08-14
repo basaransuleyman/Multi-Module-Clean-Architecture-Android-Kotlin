@@ -13,7 +13,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class DetailViewModel @Inject constructor(
+class DetailSharedViewModel @Inject constructor(
     private val getDetailUseCase: GetDetailUseCase
 ) : ViewModel() {
 
