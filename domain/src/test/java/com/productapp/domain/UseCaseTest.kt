@@ -7,10 +7,8 @@ import com.product.common.model.list.ListProductsUIModel
 import com.product.common.model.list.ListUIModel
 import com.product.common.utils.Resource
 import com.productapp.domain.repository.DetailRepository
-import com.productapp.domain.repository.HomeRepository
 import com.productapp.domain.repository.ListRepository
 import com.productapp.domain.usecase.GetDetailUseCase
-import com.productapp.domain.usecase.GetHomeUseCase
 import com.productapp.domain.usecase.GetListUseCase
 import junit.framework.TestCase.assertEquals
 import kotlinx.coroutines.Dispatchers
@@ -23,9 +21,6 @@ class UseCaseTest {
 
     private lateinit var detailRepository: DetailRepository
     private lateinit var detailUseCase: GetDetailUseCase
-
-    private lateinit var homeRepository: HomeRepository
-    private lateinit var homeUseCase: GetHomeUseCase
 
     private lateinit var listRepository: ListRepository
     private lateinit var listUseCase: GetListUseCase
