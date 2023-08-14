@@ -12,7 +12,7 @@ This project has been crafted with the intention of providing a transparent view
 - MVVM & MVI
 - Modularization & Multi Module
 - Clean Architecture 
-- Jetpack Compose 
+- Jetpack Compose
 - View Binding 
 - Hilt 
 - Retrofit
@@ -22,6 +22,7 @@ This project has been crafted with the intention of providing a transparent view
 - Shimmer 
 - Material Design 
 - Espresso
+- Centralize Dependencies( With Version Catalogs )
 - Hilt Android Testing
 - KotlinX Coroutines Test
 - Fragment Testing
