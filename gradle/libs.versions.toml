@@ -33,6 +33,7 @@ fragmenTestingUI = "1.5.7"
 hiltTesting = "2.44"
 rxJava = "2.1.1"
 composeMaterial = "1.1.1"
+fragmenKtx = "1.5.7"
 
 [libraries]
 appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
@@ -75,5 +76,5 @@ compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
 compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
 compose-ui-viewbinding = { module = "androidx.compose.ui:ui-viewbinding" }
 paging = { module = "androidx.paging:paging-runtime", version.ref = "paging" }
-compose-ui-material = { module = "androidx.compose.material3:material3", version.ref ="composeMaterial" }
-
+compose-ui-material = { module = "androidx.compose.material3:material3", version.ref = "composeMaterial" }
+fragment-ktx = { module = "androidx.fragment:fragment-ktx", version.ref = "fragmenKtx" }

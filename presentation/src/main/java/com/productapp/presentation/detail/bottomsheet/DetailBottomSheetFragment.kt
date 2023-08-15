@@ -70,6 +70,7 @@ class DetailBottomSheetFragment : BottomSheetDialogFragment() {
             product?.let {
                 productNameTextView.text = product.productName
                 productImageView.setImageUrl(product.productImage)
+                detailProductContentView.bind(product)
             }
             productButton.setOnClickListener {
                 findNavController().navigate(R.id.homeFragment)

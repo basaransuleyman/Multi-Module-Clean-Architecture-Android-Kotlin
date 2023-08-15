@@ -23,7 +23,7 @@
         android:layout_marginTop="16dp"
         android:gravity="center"
         android:textColor="@color/md_theme_light_onPrimaryContainer"
-        android:textSize="24sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,14 +32,26 @@
 
     <ImageView
         android:id="@+id/product_image_view"
-        android:layout_width="300dp"
-        android:layout_height="200dp"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
         android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/product_name_text_view"
         tools:src="@drawable/ic_share" />
 
+    <com.productapp.presentation.detail.customview.DetailProductContent
+        android:id="@+id/detail_product_content_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="16dp"
+        android:visibility="visible"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/product_image_view"
+        app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/product_button_constraint_layout"
@@ -50,15 +62,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/product_image_view">
+        app:layout_constraintTop_toBottomOf="@id/detail_product_content_view">
 
         <Button
             android:id="@+id/product_button"
-            android:layout_width="match_parent"
+            android:layout_width="200dp"
             android:layout_height="50dp"
             android:layout_marginHorizontal="24dp"
-            android:layout_marginTop="24dp"
-            android:background="@color/md_theme_dark_onSurface"
+            android:background="@color/md_theme_light_primary"
             android:text="Close"
             android:textColor="@color/md_theme_light_onSurface"
             app:layout_constraintBottom_toBottomOf="parent"

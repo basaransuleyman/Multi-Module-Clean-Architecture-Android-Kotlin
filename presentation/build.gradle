@@ -57,6 +57,7 @@ dependencies {
     implementation libs.compose.ui
     implementation libs.compose.ui.graphics
     implementation libs.compose.ui.material
+    implementation libs.fragment.ktx
     debugImplementation libs.compose.ui.tooling
     implementation libs.compose.hilt.navigation
     implementation libs.compose.view.model
