@@ -6,12 +6,11 @@ plugins {
 }
 
 android {
-    namespace 'com.product.sideapp.data'
-    compileSdk 33
+    compileSdk = libs.versions.compileSdk.get().toInteger()
 
     defaultConfig {
-        minSdk 24
-        targetSdk 33
+        minSdkVersion libs.versions.minSdk.get().toInteger()
+        targetSdkVersion libs.versions.compileSdk.get().toInteger()
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -30,28 +29,20 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    namespace 'com.product.sideapp.data'
 }
 
 dependencies {
-
-    def retrofitVersion = '2.9.0'
-    def hilt_version = "2.47"
-
-    implementation("com.squareup.okhttp3:logging-interceptor:4.10.0")
-    implementation("com.google.dagger:hilt-android:$hilt_version")
-    kapt("com.google.dagger:hilt-android-compiler:$hilt_version")
-    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
-    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
-    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
-    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
-
     implementation project(path: ':common')
     implementation project(path: ':domain')
 
-    implementation 'androidx.core:core-ktx:1.8.0'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.9.0'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation libs.okhttp.logging.interceptor
+    implementation libs.hilt.core
+    kapt libs.hilt.compiler
+    implementation libs.retrofit.core
+    implementation libs.retrofit.gson.converter
+    implementation libs.rx.java.android
+    implementation libs.rx.java.core
+    implementation libs.android.core
+    implementation libs.appcompat
 }

@@ -1,0 +1,79 @@
+[versions]
+# @keep
+compileSdk = "33"
+minSdk = "24"
+targetSdk = "33"
+androidCore = "1.10.1"
+appcompat = "1.6.1"
+material = "1.9.0"
+junitCore = "4.13.2"
+junitTest = "1.1.5"
+espresso = "3.5.1"
+hilt = "2.47"
+coroutinesCore = "1.7.2"
+okhttp = "4.10.0"
+retrofit = "2.9.0"
+paging = "3.2.0"
+lifecycleRuntimeKtx = "2.4.0"
+composeActivity = "1.7.2"
+composeBom = "2022.10.00"
+compose = "2.6.1"
+composeHiltNav = "1.0.0"
+viewPager = "1.0.0"
+flexBox = "3.0.0"
+shimmer = "0.5.0"
+lottie = "5.2.0"
+glide = "4.15.1"
+swipeToRefresh = "1.1.0"
+composeGlide = "1.0.0-alpha.1"
+navigation = "2.4.2"
+mockkAndroid = "1.12.3"
+mockkCore = "1.13.2"
+fragmenTestingUI = "1.5.7"
+hiltTesting = "2.44"
+rxJava = "2.1.1"
+composeMaterial = "1.1.1"
+
+[libraries]
+appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+android-core = { module = "androidx.core:core-ktx", version.ref = "androidCore" }
+material = { module = "com.google.android.material:material", version.ref = "material" }
+junit-core = { module = "junit:junit", version.ref = "junitCore" }
+junit-test = { module = "androidx.test.ext:junit", version.ref = "junitTest" }
+espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "espresso" }
+hilt-core = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
+coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutinesCore" }
+hilt-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
+okhttp-logging-interceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "okhttp" }
+retrofit-core = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+retrofit-gson-converter = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
+lifecycle-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+compose-activity = { module = "androidx.activity:activity-compose", version.ref = "composeActivity" }
+compose-bom = { module = "androidx.compose:compose-bom", version.ref = "composeBom" }
+compose-lifecycle = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "compose" }
+compose-view-model = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "compose" }
+compose-hilt-navigation = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "composeHiltNav" }
+compose-glide = { module = "com.github.bumptech.glide:compose", version.ref = "composeGlide" }
+view-pager = { module = "androidx.viewpager2:viewpager2", version.ref = "viewPager" }
+flex-box = { module = "com.google.android.flexbox:flexbox", version.ref = "flexBox" }
+shimmer = { module = "com.facebook.shimmer:shimmer", version.ref = "shimmer" }
+lottie = { module = "com.airbnb.android:lottie", version.ref = "lottie" }
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+swipe-to-refresh = { module = "androidx.swiperefreshlayout:swiperefreshlayout", version.ref = "swipeToRefresh" }
+navigation-fragment-ktx = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navigation" }
+navigation-ui-ktx = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigation" }
+mockk-android = { module = "io.mockk:mockk-android", version.ref = "mockkAndroid" }
+mockk-core = { module = "io.mockk:mockk", version.ref = "mockkCore" }
+ui-test-fragment = { module = "androidx.fragment:fragment-testing", version.ref = "fragmenTestingUI" }
+hilt-test = { module = "com.google.dagger:hilt-android-testing", version.ref = "hiltTesting" }
+rx-java-core = { module = "com.squareup.retrofit2:adapter-rxjava2", version.ref = "retrofit" }
+rx-java-android = { module = "io.reactivex.rxjava2:rxandroid", version.ref = "rxJava" }
+compose-ui = { module = "androidx.compose.ui:ui" }
+compose-ui-graphics = { module = "androidx.compose.ui:ui-graphics" }
+compose-ui-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4" }
+compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
+compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
+compose-ui-viewbinding = { module = "androidx.compose.ui:ui-viewbinding" }
+paging = { module = "androidx.paging:paging-runtime", version.ref = "paging" }
+compose-ui-material = { module = "androidx.compose.material3:material3", version.ref ="composeMaterial" }
+

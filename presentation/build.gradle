@@ -6,12 +6,11 @@ plugins {
 }
 
 android {
-    namespace 'com.product.sideapp.home'
-    compileSdk 33
+    compileSdk = libs.versions.compileSdk.get().toInteger()
 
     defaultConfig {
-        minSdk 24
-        targetSdk 33
+        minSdkVersion libs.versions.minSdk.get().toInteger()
+        targetSdkVersion libs.versions.compileSdk.get().toInteger()
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -45,63 +44,42 @@ android {
             excludes += '/META-INF/{AL2.0,LGPL2.1}'
         }
     }
+    namespace 'com.product.sideapp.home'
 }
 
 dependencies {
-    def paging_version = "3.1.1"
-    def flexbox_version = "3.0.0"
-    def shimmer_version = "0.5.0"
-    def hilt_version = "2.47"
-    def nav_version = "2.6.0"
-
-    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
-    implementation 'androidx.activity:activity-compose:1.5.1'
-    implementation platform('androidx.compose:compose-bom:2022.10.00')
-    implementation 'androidx.compose.ui:ui'
-    implementation 'androidx.compose.ui:ui-graphics'
-    implementation 'androidx.compose.ui:ui-tooling-preview'
-    implementation 'androidx.compose.material3:material3'
-    androidTestImplementation platform('androidx.compose:compose-bom:2022.10.00')
-    androidTestImplementation 'androidx.compose.ui:ui-test-junit4'
-    debugImplementation 'androidx.compose.ui:ui-tooling'
-    debugImplementation 'androidx.compose.ui:ui-test-manifest'
-    implementation "androidx.lifecycle:lifecycle-runtime-compose:2.6.1"
-    implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1")
-    implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
-
-    implementation "androidx.viewpager2:viewpager2:1.0.0"
-    //TODO: gradlelerı duzenle
-    implementation "com.google.android.flexbox:flexbox:$flexbox_version"
-    implementation "com.facebook.shimmer:shimmer:$shimmer_version"
-    implementation "androidx.paging:paging-runtime:$paging_version"
-    implementation 'com.airbnb.android:lottie:5.2.0'
-    implementation 'com.github.bumptech.glide:glide:4.15.1'
-    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
-    implementation "com.github.bumptech.glide:compose:1.0.0-alpha.1"
-
-    implementation("com.google.dagger:hilt-android:$hilt_version")
-    kapt("com.google.dagger:hilt-android-compiler:$hilt_version")
-
-    implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
-    implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
     implementation project(path: ':domain')
     implementation project(path: ':common')
 
-    implementation 'androidx.core:core-ktx:1.8.0'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.9.0'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation libs.lifecycle.ktx
+    implementation libs.compose.activity
+    implementation libs.compose.bom
+    implementation libs.compose.ui
+    implementation libs.compose.ui.graphics
+    implementation libs.compose.ui.material
+    debugImplementation libs.compose.ui.tooling
+    implementation libs.compose.hilt.navigation
+    implementation libs.compose.view.model
+    implementation libs.compose.lifecycle
+    implementation libs.view.pager
+    implementation libs.flex.box
+    implementation libs.shimmer
+    implementation libs.paging
+    implementation libs.lottie
+    implementation libs.glide
+    implementation libs.swipe.to.refresh
+    implementation libs.compose.glide
+    implementation libs.hilt.core
+    kapt libs.hilt.compiler
+    implementation libs.navigation.fragment.ktx
+    implementation libs.navigation.ui.ktx
+    implementation libs.appcompat
+    implementation libs.android.core
+    testImplementation libs.junit.core
+    androidTestImplementation libs.junit.test
+    androidTestImplementation libs.espresso.core
+    implementation libs.hilt.test
+    kaptAndroidTest libs.hilt.compiler
+    androidTestImplementation libs.compose.bom
 
-    androidTestImplementation "io.mockk:mockk-android:1.12.3"
-    testImplementation "io.mockk:mockk:1.13.2"
-    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3'
-    debugImplementation("androidx.fragment:fragment-testing:1.5.7")
-
-    testImplementation("com.google.dagger:hilt-android-testing:2.44")
-    kaptTest("com.google.dagger:hilt-android-compiler:2.44")
-    androidTestImplementation("com.google.dagger:hilt-android-testing:2.44")
-    kaptAndroidTest("com.google.dagger:hilt-android-compiler:2.44")
-
-}
+ }
