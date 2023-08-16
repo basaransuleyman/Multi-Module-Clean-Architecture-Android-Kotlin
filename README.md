@@ -5,7 +5,7 @@ This project has been crafted with the intention of providing a transparent view
 
 # Modul Graph 
 
-![SS1](https://i.ibb.co/wpY9szJ/Screen-Shot-2023-08-16-at-23-46-46.png)
+![SS1](https://i.ibb.co/zFZ3Cff/ezgif-com-resize-17.png)
 
 # Contents & Libraries 
 
