@@ -1,8 +1,8 @@
 package com.productapp.presentation
 
-import com.product.common.mapper.UIConverterModel
-import com.product.common.model.detail.DetailUIModel
-import com.product.common.model.list.ListUIModel
+import com.product.common.mapper.CommonConverterModel
+import com.product.common.model.detail.DetailModel
+import com.product.common.model.list.ListModel
 import com.product.common.utils.Resource
 import com.productapp.domain.usecase.GetDetailUseCase
 import com.productapp.domain.usecase.GetListUseCase
@@ -52,7 +52,7 @@ class ViewModelTest {
     @Test
     fun `getDetailTest()`() = runBlocking {
         // Given
-        val detailUIModel = DetailUIModel(
+        val detailUIModel = DetailModel(
             productImage = "image",
             productName = "Samsung Galaxy S9",
             productId = "123",
@@ -63,7 +63,7 @@ class ViewModelTest {
             otherProducts = emptyList(),
             productOptions = emptyList()
         )
-        coEvery { getDetailUseCase(Unit) } returns Resource.Success(UIConverterModel(detailUIModel))
+        coEvery { getDetailUseCase(Unit) } returns Resource.Success(CommonConverterModel(detailUIModel))
 
         // When
         detailViewModel.getDetail()
@@ -76,14 +76,14 @@ class ViewModelTest {
     @Test
     fun `getListWhenPage1TestSuccess()`() = runBlocking<Unit> {
         // Given
-        val listUIModel = ListUIModel(
+        val listUIModel = ListModel(
             productLimit = 20,
             totalCount = 4,
             productList = emptyList()
         )
 
         coEvery { getListUseCase(GetListUseCase.Param(1)) } returns Resource.Success(
-            UIConverterModel(listUIModel)
+            CommonConverterModel(listUIModel)
         )
 
         // When

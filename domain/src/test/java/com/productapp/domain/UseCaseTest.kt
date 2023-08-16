@@ -1,10 +1,10 @@
 package com.productapp.domain
 
-import com.product.common.mapper.UIConverterModel
-import com.product.common.model.detail.DetailUIModel
+import com.product.common.mapper.CommonConverterModel
+import com.product.common.model.detail.DetailModel
 import com.product.common.model.detail.OtherProducts
-import com.product.common.model.list.ListProductsUIModel
-import com.product.common.model.list.ListUIModel
+import com.product.common.model.list.ListProductsModel
+import com.product.common.model.list.ListModel
 import com.product.common.utils.Resource
 import com.productapp.domain.repository.DetailRepository
 import com.productapp.domain.repository.ListRepository
@@ -28,7 +28,7 @@ class UseCaseTest {
     @Before
     fun setup() {
 
-        val detailUIModel = DetailUIModel(
+        val detailUIModel = DetailModel(
             productImage = "image",
             productName = "Samsung Galaxy S9",
             productId = "123",
@@ -40,11 +40,11 @@ class UseCaseTest {
             productOptions = listOf("option1", "option2")
         )
 
-        val listUIModel = ListUIModel(
+        val listUIModel = ListModel(
             productLimit = 20,
             totalCount = 4,
             productList = listOf(
-                ListProductsUIModel(
+                ListProductsModel(
                     productId = "101",
                     productImage = "productImage",
                     text = "Samsung Galaxy S9",
@@ -57,18 +57,18 @@ class UseCaseTest {
         )
 
         detailRepository = object : DetailRepository {
-            override suspend fun getDetail(): Resource<UIConverterModel<DetailUIModel>> {
-                return Resource.Success(UIConverterModel(detailUIModel))
+            override suspend fun getDetail(): Resource<CommonConverterModel<DetailModel>> {
+                return Resource.Success(CommonConverterModel(detailUIModel))
             }
         }
 
         listRepository = object : ListRepository {
-            override suspend fun getList1(): Resource<UIConverterModel<ListUIModel>> {
-                return Resource.Success(UIConverterModel(listUIModel))
+            override suspend fun getList1(): Resource<CommonConverterModel<ListModel>> {
+                return Resource.Success(CommonConverterModel(listUIModel))
             }
 
-            override suspend fun getList2(): Resource<UIConverterModel<ListUIModel>> {
-                return Resource.Success(UIConverterModel(listUIModel))
+            override suspend fun getList2(): Resource<CommonConverterModel<ListModel>> {
+                return Resource.Success(CommonConverterModel(listUIModel))
             }
         }
 
@@ -79,8 +79,8 @@ class UseCaseTest {
     @OptIn(ExperimentalCoroutinesApi::class)
     @Test
     fun detailUseCaseSuccess() = runBlockingTest {
-        val expectedResult = UIConverterModel(
-            DetailUIModel(
+        val expectedResult = CommonConverterModel(
+            DetailModel(
                 productImage = "image",
                 productName = "Samsung Galaxy S9",
                 productId = "123",
@@ -101,12 +101,12 @@ class UseCaseTest {
     @OptIn(ExperimentalCoroutinesApi::class)
     @Test
     fun listUseCaseTest() = runBlockingTest {
-        val expectedResult = UIConverterModel(
-            ListUIModel(
+        val expectedResult = CommonConverterModel(
+            ListModel(
                 productLimit = 20,
                 totalCount = 4,
                 productList = listOf(
-                    ListProductsUIModel(
+                    ListProductsModel(
                         productId = "101",
                         productImage = "productImage",
                         text = "Samsung Galaxy S9",
