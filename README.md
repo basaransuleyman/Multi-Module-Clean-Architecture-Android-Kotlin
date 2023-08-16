@@ -1,11 +1,11 @@
 # Multi Module Clean Arch 
 
 
-This project has been crafted with the intention of providing a transparent view into my approach towards software development, including my work methodologies, architectural choices, design pattern implementations, modularization strategies, code readability enhancements, utilized technologies and libraries, version control practices, and more.
+This project has been crafted with the intention of providing a transparent view into my approach towards software development, including my work methodologies, architectural choices, design pattern implementations, modularization strategies, code readability enhancements, utilized technologies and libraries, version control practices, and more. I will share all flow and contents with part by part on [Medium](https://medium.com/@basaransuleyman).
 
 # Modul Graph 
 
-![SS1](https://i.ibb.co/Zff4Kc9/ezgif-com-resize-3.png)
+![SS1](https://i.ibb.co/Dfb56m8/ezgif-com-resize-6.png)
 
 # Contents & Libraries 
 
