@@ -34,7 +34,6 @@ android {
 
 dependencies {
     implementation project(path: ':common')
-    implementation project(path: ':domain')
 
     implementation libs.okhttp.logging.interceptor
     implementation libs.hilt.core

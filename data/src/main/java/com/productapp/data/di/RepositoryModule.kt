@@ -1,15 +1,12 @@
 package com.productapp.data.di
 
-import com.productapp.data.mapper.DetailCommonModelMapper
-import com.productapp.data.mapper.HomeCommonModelMapper
-import com.productapp.data.mapper.ListCommonModelMapper
 import com.productapp.data.remote.datasource.DataSource
+import com.productapp.data.repository.DetailRepository
 import com.productapp.data.repository.DetailRepositoryImpl
+import com.productapp.data.repository.HomeRepository
 import com.productapp.data.repository.HomeRepositoryImpl
+import com.productapp.data.repository.ListRepository
 import com.productapp.data.repository.ListRepositoryImpl
-import com.productapp.domain.repository.DetailRepository
-import com.productapp.domain.repository.HomeRepository
-import com.productapp.domain.repository.ListRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -23,27 +20,24 @@ object RepositoryModule {
     @Singleton
     @Provides
     fun provideHomeRepository(
-        dataSource: DataSource,
-        mapper: HomeCommonModelMapper
+        dataSource: DataSource
     ): HomeRepository = HomeRepositoryImpl(
-        dataSource, mapper
+        dataSource
     )
 
     @Singleton
     @Provides
     fun provideDetailRepository(
-        dataSource: DataSource,
-        mapper: DetailCommonModelMapper
+        dataSource: DataSource
     ): DetailRepository = DetailRepositoryImpl(
-        dataSource, mapper
+        dataSource
     )
 
     @Singleton
     @Provides
     fun provideListRepository(
-        dataSource: DataSource,
-        mapper: ListCommonModelMapper
+        dataSource: DataSource
     ): ListRepository = ListRepositoryImpl(
-        dataSource, mapper
+        dataSource
     )
 }
