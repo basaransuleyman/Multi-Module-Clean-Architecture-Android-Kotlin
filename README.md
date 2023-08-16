@@ -37,7 +37,6 @@ This project has been crafted with the intention of providing a transparent view
 
  # App Screens 
 
-  Home
  ![SS1](https://i.ibb.co/54RM2B0/ezgif-com-resize-8.png)
  ![SS1](https://i.ibb.co/vh88HQr/ezgif-com-resize-10.png) 
  ![SS1](https://i.ibb.co/r31dzJm/ezgif-com-resize-11.png) 
