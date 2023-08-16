@@ -5,7 +5,7 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.product.common.model.detail.DetailUIModel
+import com.product.common.model.detail.DetailModel
 import com.product.sideapp.home.databinding.LayoutDetailProductContentBinding
 import com.productapp.presentation.detail.adapter.OtherProductsAdapter
 import com.productapp.presentation.detail.adapter.ProductOptionsAdapter
@@ -19,7 +19,7 @@ class DetailProductContent(context: Context, attrs: AttributeSet? = null) :
         binding = LayoutDetailProductContentBinding.inflate(LayoutInflater.from(context), this)
     }
 
-    fun bind(detailUIModel: DetailUIModel) {
+    fun bind(detailUIModel: DetailModel) {
         with(binding) {
             detailUIModel.apply {
                 productNameTextView.text = productName
@@ -32,7 +32,7 @@ class DetailProductContent(context: Context, attrs: AttributeSet? = null) :
         }
     }
 
-    private fun bindOtherProducts(detailUIModel: DetailUIModel) {
+    private fun bindOtherProducts(detailUIModel: DetailModel) {
         with(binding) {
             otherProductsSectionTextView.text = OTHER_PRODUCT_SECTION_TEXT
             otherProductsRecyclerView.layoutManager =
@@ -45,7 +45,7 @@ class DetailProductContent(context: Context, attrs: AttributeSet? = null) :
         }
     }
 
-    private fun bindOptions(detailUIModel: DetailUIModel) {
+    private fun bindOptions(detailUIModel: DetailModel) {
         with(binding) {
             productOptionsRecyclerView.layoutManager =
                 LinearLayoutManager(binding.root.context, LinearLayoutManager.HORIZONTAL, false)

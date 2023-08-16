@@ -3,14 +3,14 @@ package com.productapp.presentation.list.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.product.common.model.list.ListProductsUIModel
+import com.product.common.model.list.ListProductsModel
 import com.product.sideapp.home.databinding.ListProductItemBinding
 import com.productapp.presentation.common.extension.setImageUrl
 
 class ProductListAdapter() :
     RecyclerView.Adapter<ProductListAdapter.ProductListViewHolder>() {
 
-    private var productList: ArrayList<ListProductsUIModel> = arrayListOf()
+    private var productList: ArrayList<ListProductsModel> = arrayListOf()
 
 
     private var clickListener: ((String?) -> Unit)? = null
@@ -18,7 +18,7 @@ class ProductListAdapter() :
     fun listProductItemClickListener(productItemClickListener: ((String?) -> Unit)?) {
         clickListener = productItemClickListener
     }
-    fun updateProductList(itemList: List<ListProductsUIModel>?) {
+    fun updateProductList(itemList: List<ListProductsModel>?) {
         itemList?.let {
             productList.addAll(it)
         }
@@ -44,7 +44,7 @@ class ProductListAdapter() :
 
     inner class ProductListViewHolder(private val binding: ListProductItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(product: ListProductsUIModel, clickListener: ((String?) -> Unit)?) {
+        fun bind(product: ListProductsModel, clickListener: ((String?) -> Unit)?) {
             with(binding) {
                 product.apply {
                     listProductImageView.setImageUrl(productImage)

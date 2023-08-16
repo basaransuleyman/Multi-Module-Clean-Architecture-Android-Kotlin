@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.product.common.extensions.onFailure
 import com.product.common.extensions.onSuccess
-import com.product.common.model.detail.DetailUIModel
+import com.product.common.model.detail.DetailModel
 import com.productapp.domain.usecase.GetDetailUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -17,7 +17,7 @@ class DetailSharedViewModel @Inject constructor(
     private val getDetailUseCase: GetDetailUseCase
 ) : ViewModel() {
 
-    private val _detailFlow = MutableSharedFlow<DetailUIModel?>(extraBufferCapacity = 1)
+    private val _detailFlow = MutableSharedFlow<DetailModel?>(extraBufferCapacity = 1)
     val detailFlow = _detailFlow.asSharedFlow()
 
     fun getDetail() {

@@ -1,8 +1,8 @@
 package com.productapp.data.di
 
-import com.productapp.data.mapper.DetailUIMapper
-import com.productapp.data.mapper.HomeUIMapper
-import com.productapp.data.mapper.ListUIMapper
+import com.productapp.data.mapper.DetailCommonModelMapper
+import com.productapp.data.mapper.HomeCommonModelMapper
+import com.productapp.data.mapper.ListCommonModelMapper
 import com.productapp.data.remote.datasource.DataSource
 import com.productapp.data.repository.DetailRepositoryImpl
 import com.productapp.data.repository.HomeRepositoryImpl
@@ -24,7 +24,7 @@ object RepositoryModule {
     @Provides
     fun provideHomeRepository(
         dataSource: DataSource,
-        mapper: HomeUIMapper
+        mapper: HomeCommonModelMapper
     ): HomeRepository = HomeRepositoryImpl(
         dataSource, mapper
     )
@@ -33,7 +33,7 @@ object RepositoryModule {
     @Provides
     fun provideDetailRepository(
         dataSource: DataSource,
-        mapper: DetailUIMapper
+        mapper: DetailCommonModelMapper
     ): DetailRepository = DetailRepositoryImpl(
         dataSource, mapper
     )
@@ -42,7 +42,7 @@ object RepositoryModule {
     @Provides
     fun provideListRepository(
         dataSource: DataSource,
-        mapper: ListUIMapper
+        mapper: ListCommonModelMapper
     ): ListRepository = ListRepositoryImpl(
         dataSource, mapper
     )

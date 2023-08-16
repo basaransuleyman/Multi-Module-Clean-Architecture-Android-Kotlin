@@ -1,8 +1,8 @@
 package com.product.common.model.detail
 
-import com.product.common.mapper.UIModel
+import com.product.common.mapper.CommonModel
 
-data class DetailUIModel(
+data class DetailModel(
     val productImage: String,
     val productName: String,
     val productId: String,
@@ -12,4 +12,4 @@ data class DetailUIModel(
     val share: String,
     val otherProducts: List<OtherProducts>? = null,
     val productOptions: List<String>
-) : UIModel
+) : CommonModel

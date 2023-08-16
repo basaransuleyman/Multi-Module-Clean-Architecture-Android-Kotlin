@@ -12,7 +12,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
-import com.product.common.model.detail.DetailUIModel
+import com.product.common.model.detail.DetailModel
 import com.product.sideapp.home.databinding.FragmentDetailBinding
 import com.productapp.presentation.common.ToolbarTransitionAnimation
 import com.productapp.presentation.common.extension.setImageUrl
@@ -69,7 +69,7 @@ class DetailFragment : Fragment() {
         }
     }
 
-    private fun bindUI(detailItem: DetailUIModel) {
+    private fun bindUI(detailItem: DetailModel) {
         binding.productImageImageView.setImageUrl(detailItem.productImage)
         binding.detailProductContentView.bind(detailItem)
 

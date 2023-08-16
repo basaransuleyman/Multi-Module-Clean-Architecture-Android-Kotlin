@@ -1,14 +1,14 @@
 package com.product.common.model.list
 
-import com.product.common.mapper.UIModel
+import com.product.common.mapper.CommonModel
 
-data class ListUIModel(
-    val productList: List<ListProductsUIModel>?,
+data class ListModel(
+    val productList: List<ListProductsModel>?,
     val productLimit: Int?,
     val  totalCount: Int?
-) : UIModel
+) : CommonModel
 
-data class ListProductsUIModel(
+data class ListProductsModel(
     val productId: String,
     val productImage: String,
     val text: String,
@@ -16,4 +16,4 @@ data class ListProductsUIModel(
     val review: String,
     val questions: String,
     val rating: String
-) : UIModel
+) : CommonModel

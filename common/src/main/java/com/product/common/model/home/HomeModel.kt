@@ -1,12 +1,12 @@
 package com.product.common.model.home
 
-import com.product.common.mapper.UIModel
+import com.product.common.mapper.CommonModel
 
-data class HomeUIModel(
+data class HomeModel(
     var sections: List<HomeSectionAdapterItem>
-) : UIModel
+) : CommonModel
 
-sealed class HomeSectionAdapterItem : UIModel {
+sealed class HomeSectionAdapterItem : CommonModel {
     abstract val viewType: Int
 
     data class Catalog(

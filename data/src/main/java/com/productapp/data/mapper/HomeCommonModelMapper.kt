@@ -1,17 +1,17 @@
 package com.productapp.data.mapper
 
-import com.product.common.mapper.DataToUIModelMapper
+import com.product.common.mapper.DataToCommonModelMapper
 import com.product.common.model.home.BannerItem
 import com.product.common.model.home.CatalogItem
-import com.product.common.model.home.HomeUIModel
+import com.product.common.model.home.HomeModel
 import com.product.common.model.home.HomeSectionAdapterItem
 import com.product.common.model.home.ProductItem
 import com.productapp.data.model.HomeResponse
 import com.productapp.data.model.HomeSection
 import javax.inject.Inject
 
-class HomeUIMapper @Inject constructor() : DataToUIModelMapper<HomeResponse, HomeUIModel> {
-    override fun mapToUIModel(responseModel: HomeResponse?): HomeUIModel {
+class HomeCommonModelMapper @Inject constructor() : DataToCommonModelMapper<HomeResponse, HomeModel> {
+    override fun mapToCommonModel(responseModel: HomeResponse?): HomeModel {
         val homeSectionsAdapterItems = mutableListOf<HomeSectionAdapterItem>()
 
         for (section in responseModel?.sections!!) {
@@ -69,7 +69,7 @@ class HomeUIMapper @Inject constructor() : DataToUIModelMapper<HomeResponse, Hom
             sectionItem?.let { homeSectionsAdapterItems.add(it) }
 
         }
-        return HomeUIModel(sections = homeSectionsAdapterItems)
+        return HomeModel(sections = homeSectionsAdapterItems)
     }
 
     private fun mapHomeSectionToCatalogItem(homeSection: HomeSection): CatalogItem {

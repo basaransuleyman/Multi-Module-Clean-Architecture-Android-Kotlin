@@ -11,7 +11,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.product.common.model.detail.DetailUIModel
+import com.product.common.model.detail.DetailModel
 import com.product.sideapp.home.R
 import com.product.sideapp.home.databinding.FragmentDetailBottomsheetBinding
 import com.productapp.presentation.common.extension.setImageUrl
@@ -61,11 +61,11 @@ class DetailBottomSheetFragment : BottomSheetDialogFragment() {
         }
     }
 
-    private fun initialize(productDetail: DetailUIModel?) {
+    private fun initialize(productDetail: DetailModel?) {
         bindUI(productDetail)
     }
 
-    private fun bindUI(product: DetailUIModel?) {
+    private fun bindUI(product: DetailModel?) {
         with(binding) {
             product?.let {
                 productNameTextView.text = product.productName
