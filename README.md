@@ -39,11 +39,20 @@ This project has been crafted with the intention of providing a transparent view
 
   Home
  ![SS1](https://i.ibb.co/54RM2B0/ezgif-com-resize-8.png)
- Detail 
+ Detail Default
  ![SS1](https://i.ibb.co/vh88HQr/ezgif-com-resize-10.png) 
-
-
-
+ Detail Transitions
+ ![SS1](https://i.ibb.co/r31dzJm/ezgif-com-resize-11.png) 
+ Detail End
+ ![SS1](https://i.ibb.co/hFc14V8/ezgif-com-resize-12.png)
+ List - Pagination
+![SS1](https://i.ibb.co/1GRTymq/ezgif-com-resize-13.png)
+ Detail - Bottom Sheet
+ ![SS1](https://i.ibb.co/LppRyMX/ezgif-com-resize-14.png)
+ Detail - Bottom Sheet Full Page
+ ![SS1](https://i.ibb.co/qr4b2Fz/ezgif-com-resize-15.png)
+ Compose
+  ![SS1](https://i.ibb.co/jfv8xkc/ezgif-com-resize-16.png)
 
 
 
