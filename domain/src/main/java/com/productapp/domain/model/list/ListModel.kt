@@ -1,12 +1,12 @@
-package com.product.common.model.list
+package com.productapp.domain.model.list
 
-import com.product.common.mapper.CommonModel
+import com.product.common.model.DomainModel
 
 data class ListModel(
     val productList: List<ListProductsModel>?,
     val productLimit: Int?,
     val  totalCount: Int?
-) : CommonModel
+) : DomainModel
 
 data class ListProductsModel(
     val productId: String,
@@ -16,4 +16,4 @@ data class ListProductsModel(
     val review: String,
     val questions: String,
     val rating: String
-) : CommonModel
+) : DomainModel

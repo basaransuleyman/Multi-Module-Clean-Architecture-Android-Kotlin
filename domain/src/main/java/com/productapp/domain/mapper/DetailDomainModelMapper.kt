@@ -1,14 +1,15 @@
-package com.productapp.data.mapper
+package com.productapp.domain.mapper
 
-import com.product.common.mapper.DataToCommonModelMapper
-import com.product.common.model.detail.DetailModel
-import com.product.common.model.detail.OtherProducts
+import com.product.common.extensions.DataToDomainModelMapper
+import com.productapp.domain.model.detail.DetailModel
+import com.productapp.domain.model.detail.OtherProducts
 import com.productapp.data.model.DetailResponse
 import com.productapp.data.model.OtherProduct
 import javax.inject.Inject
 
-class DetailCommonModelMapper @Inject constructor() : DataToCommonModelMapper<DetailResponse, DetailModel> {
-    override fun mapToCommonModel(responseModel: DetailResponse?): DetailModel {
+class DetailDomainModelMapper @Inject constructor() :
+    DataToDomainModelMapper<DetailResponse, DetailModel> {
+    override fun mapToDomainModel(responseModel: DetailResponse?): DetailModel {
         val detailResponse = requireNotNull(responseModel)
         return DetailModel(
             productImage = detailResponse.productImage,
@@ -18,12 +19,12 @@ class DetailCommonModelMapper @Inject constructor() : DataToCommonModelMapper<De
             review = detailResponse.review ?: "",
             questions = detailResponse.questions ?: "",
             share = detailResponse.share,
-            otherProducts = responseProductsToCommonProducts(detailResponse.otherProducts),
+            otherProducts = dataProductsToDomainProducts(detailResponse.otherProducts),
             productOptions = detailResponse.productOptions
         )
     }
 
-    private fun responseProductsToCommonProducts(otherProducts: List<OtherProduct>?): List<OtherProducts>? {
+    private fun dataProductsToDomainProducts(otherProducts: List<OtherProduct>?): List<OtherProducts>? {
         return otherProducts?.map { responseProduct ->
             OtherProducts(
                 productImage = responseProduct.productImage ?: "",

@@ -1,4 +1,4 @@
-package com.product.common.model.home
+package com.productapp.domain.model.home
 
 data class ProductItem(
     val productId: String?,

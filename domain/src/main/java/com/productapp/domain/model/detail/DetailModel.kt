@@ -1,6 +1,6 @@
-package com.product.common.model.detail
+package com.productapp.domain.model.detail
 
-import com.product.common.mapper.CommonModel
+import com.product.common.model.DomainModel
 
 data class DetailModel(
     val productImage: String,
@@ -12,4 +12,4 @@ data class DetailModel(
     val share: String,
     val otherProducts: List<OtherProducts>? = null,
     val productOptions: List<String>
-) : CommonModel
+) : DomainModel

@@ -1,15 +1,16 @@
-package com.productapp.data.mapper
+package com.productapp.domain.mapper
 
-import com.product.common.mapper.DataToCommonModelMapper
-import com.product.common.model.list.ListProductsModel
-import com.product.common.model.list.ListModel
+import com.product.common.extensions.DataToDomainModelMapper
+import com.productapp.domain.model.list.ListProductsModel
+import com.productapp.domain.model.list.ListModel
 import com.productapp.data.model.ListProducts
 import com.productapp.data.model.ListResponse
 import javax.inject.Inject
 
-class ListCommonModelMapper @Inject constructor() : DataToCommonModelMapper<ListResponse, ListModel> {
-    override fun mapToCommonModel(responseModel: ListResponse?): ListModel {
-        val domainList = responseModel?.listResponse?.map { responseToCommonProduct(it) }
+class ListDomainModelMapper @Inject constructor() :
+    DataToDomainModelMapper<ListResponse, ListModel> {
+    override fun mapToDomainModel(responseModel: ListResponse?): ListModel {
+        val domainList = responseModel?.listResponse?.map { responseToDomainProduct(it) }
         return ListModel(
             productList = domainList,
             productLimit = responseModel?.productLimit,
@@ -17,7 +18,7 @@ class ListCommonModelMapper @Inject constructor() : DataToCommonModelMapper<List
         )
     }
 
-    private fun responseToCommonProduct(response: ListProducts): ListProductsModel {
+    private fun responseToDomainProduct(response: ListProducts): ListProductsModel {
         return ListProductsModel(
             productId = response.productId,
             productImage = response.productImage,

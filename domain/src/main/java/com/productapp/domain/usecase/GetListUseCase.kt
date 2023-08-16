@@ -2,28 +2,38 @@ package com.productapp.domain.usecase
 
 import com.product.common.base.BaseUseCase
 import com.product.common.di.IoDispatcher
-import com.product.common.extensions.useCaseHandler
-import com.product.common.mapper.CommonConverterModel
-import com.product.common.model.list.ListModel
+import com.productapp.domain.model.list.ListModel
 import com.product.common.utils.Resource
-import com.productapp.domain.repository.ListRepository
+import com.productapp.domain.mapper.ListDomainModelMapper
+import com.productapp.data.repository.ListRepository
 import kotlinx.coroutines.CoroutineDispatcher
 import javax.inject.Inject
 
 class GetListUseCase @Inject constructor(
-    private val getDetailRepository: ListRepository,
+    private val getListRepository: ListRepository,
+    private val getListMapper: ListDomainModelMapper,
     @IoDispatcher dispatcher: CoroutineDispatcher
-) : BaseUseCase<GetListUseCase.Param, CommonConverterModel<ListModel>>(dispatcher) {
-    override suspend fun getExecutable(params: Param): Resource<CommonConverterModel<ListModel>> =
-        useCaseHandler {
-            with(getDetailRepository) {
-                when (params.page) {
-                    PAGING_NUMBER_DEFAULT -> getList1()
-                    PAGING_NUMBER_SECOND -> getList2()
-                    else -> getList1()
-                }
+) : BaseUseCase<GetListUseCase.Param, ListModel>(dispatcher) {
+    override suspend fun getExecutable(params: Param): Resource<ListModel> {
+
+        val page = params.page ?: PAGING_NUMBER_DEFAULT
+
+        val resource = if (page == PAGING_NUMBER_DEFAULT) {
+            getListRepository.getList1()
+        } else {
+            getListRepository.getList2()
+        }
+
+        return when (resource) {
+            is Resource.Success -> {
+                Resource.Success(getListMapper.mapToDomainModel(resource.data))
+            }
+
+            is Resource.Failure -> {
+                Resource.Failure(resource.error)
             }
         }
+    }
 
     data class Param(
         val page: Int?
@@ -31,6 +41,5 @@ class GetListUseCase @Inject constructor(
 
     companion object {
         const val PAGING_NUMBER_DEFAULT = 1
-        const val PAGING_NUMBER_SECOND = 2
     }
 }

@@ -1,17 +1,18 @@
-package com.productapp.data.mapper
+package com.productapp.domain.mapper
 
-import com.product.common.mapper.DataToCommonModelMapper
-import com.product.common.model.home.BannerItem
-import com.product.common.model.home.CatalogItem
-import com.product.common.model.home.HomeModel
-import com.product.common.model.home.HomeSectionAdapterItem
-import com.product.common.model.home.ProductItem
+import com.product.common.extensions.DataToDomainModelMapper
+import com.productapp.domain.model.home.BannerItem
+import com.productapp.domain.model.home.CatalogItem
+import com.productapp.domain.model.home.HomeModel
+import com.productapp.domain.model.home.HomeSectionAdapterItem
+import com.productapp.domain.model.home.ProductItem
 import com.productapp.data.model.HomeResponse
 import com.productapp.data.model.HomeSection
 import javax.inject.Inject
 
-class HomeCommonModelMapper @Inject constructor() : DataToCommonModelMapper<HomeResponse, HomeModel> {
-    override fun mapToCommonModel(responseModel: HomeResponse?): HomeModel {
+class HomeDomainModelMapper @Inject constructor() :
+    DataToDomainModelMapper<HomeResponse, HomeModel> {
+    override fun mapToDomainModel(responseModel: HomeResponse?): HomeModel {
         val homeSectionsAdapterItems = mutableListOf<HomeSectionAdapterItem>()
 
         for (section in responseModel?.sections!!) {

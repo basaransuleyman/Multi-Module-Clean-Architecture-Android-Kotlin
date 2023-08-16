@@ -34,6 +34,7 @@ android {
 
 dependencies {
     implementation project(path: ':common')
+    implementation project(path: ':data')
 
     implementation libs.hilt.core
     kapt libs.hilt.compiler

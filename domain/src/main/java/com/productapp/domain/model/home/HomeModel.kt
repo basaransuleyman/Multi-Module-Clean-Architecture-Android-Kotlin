@@ -1,12 +1,12 @@
-package com.product.common.model.home
+package com.productapp.domain.model.home
 
-import com.product.common.mapper.CommonModel
+import com.product.common.model.DomainModel
 
 data class HomeModel(
     var sections: List<HomeSectionAdapterItem>
-) : CommonModel
+) : DomainModel
 
-sealed class HomeSectionAdapterItem : CommonModel {
+sealed class HomeSectionAdapterItem : DomainModel {
     abstract val viewType: Int
 
     data class Catalog(
