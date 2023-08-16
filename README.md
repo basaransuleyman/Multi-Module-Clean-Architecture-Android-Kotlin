@@ -35,6 +35,20 @@ This project has been crafted with the intention of providing a transparent view
   
 ![SS1](https://i.ibb.co/9hTnWy6/Screen-Shot-2023-08-14-at-23-27-35.png)
 
+ # App Screens 
+
+ ![SS1](https://i.ibb.co/54RM2B0/ezgif-com-resize-8.png)
+ ![SS1](https://i.ibb.co/vh88HQr/ezgif-com-resize-10.png) 
+ ![SS1](https://i.ibb.co/r31dzJm/ezgif-com-resize-11.png) 
+ ![SS1](https://i.ibb.co/hFc14V8/ezgif-com-resize-12.png)
+ ![SS1](https://i.ibb.co/1GRTymq/ezgif-com-resize-13.png)
+ ![SS1](https://i.ibb.co/LppRyMX/ezgif-com-resize-14.png)
+ ![SS1](https://i.ibb.co/qr4b2Fz/ezgif-com-resize-15.png)
+ ![SS1](https://i.ibb.co/jfv8xkc/ezgif-com-resize-16.png)
+
+
+
  
+
 
 
