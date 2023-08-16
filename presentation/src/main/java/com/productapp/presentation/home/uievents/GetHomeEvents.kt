@@ -1,6 +1,6 @@
 package com.productapp.presentation.home.uievents
 
-import com.product.common.model.home.HomeModel
+import com.productapp.domain.model.home.HomeModel
 import java.io.IOException
 
 sealed interface GetHomeEvents {

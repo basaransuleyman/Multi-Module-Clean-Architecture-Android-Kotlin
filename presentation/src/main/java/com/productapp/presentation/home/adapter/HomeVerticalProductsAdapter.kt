@@ -3,7 +3,7 @@ package com.productapp.presentation.home.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.product.common.model.home.ProductItem
+import com.productapp.domain.model.home.ProductItem
 import com.product.sideapp.home.databinding.HomeVerticalProductItemBinding
 import com.productapp.presentation.home.viewholder.HomeVerticalProductItemViewHolder
 

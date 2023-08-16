@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.product.common.extensions.onFailure
 import com.product.common.extensions.onSuccess
-import com.product.common.model.home.HomeSectionAdapterItem
+import com.productapp.domain.model.home.HomeSectionAdapterItem
 import com.productapp.domain.usecase.GetHomeUseCase
 import com.productapp.presentation.home.uievents.GetHomeEvents
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -33,16 +33,12 @@ class HomeSharedViewModel @Inject constructor(
                 .onSuccess { homeData ->
                     _homeFlow.value = GetHomeEvents.StartShimmer
                     delay(3000) //Backend Response delay
-                    homeData.data?.let {
                         _homeFlow.value = GetHomeEvents.Idle
                         _homeFlow.value = GetHomeEvents.Success(
-                            homeData = it
+                            homeData = homeData
                         )
-
-                        _sectionList.value = it.sections
-                    }
-                }
-                .onFailure {
+                        _sectionList.value = homeData.sections
+                }.onFailure {
                     _homeFlow.value = GetHomeEvents.Failure(IOException())
                 }
         }

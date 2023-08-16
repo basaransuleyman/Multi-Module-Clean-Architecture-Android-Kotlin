@@ -43,8 +43,6 @@ class ListLazyColumnViewModel @Inject constructor(
                     )
                 }
             }
-
-            else -> {}
         }
     }
 
@@ -58,7 +56,7 @@ class ListLazyColumnViewModel @Inject constructor(
                         )
                     }
                     delay(1000)
-                    product.data?.productList.let { productList ->
+                    product.productList.let { productList ->
                         _state.update {
                             it.copy(
                                 isLoading = false,

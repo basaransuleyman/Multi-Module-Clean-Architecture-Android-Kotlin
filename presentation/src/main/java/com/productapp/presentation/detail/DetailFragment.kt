@@ -12,7 +12,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
-import com.product.common.model.detail.DetailModel
+import com.productapp.domain.model.detail.DetailModel
 import com.product.sideapp.home.databinding.FragmentDetailBinding
 import com.productapp.presentation.common.ToolbarTransitionAnimation
 import com.productapp.presentation.common.extension.setImageUrl

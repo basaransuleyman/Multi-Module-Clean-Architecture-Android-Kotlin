@@ -5,7 +5,7 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.product.common.model.detail.DetailModel
+import com.productapp.domain.model.detail.DetailModel
 import com.product.sideapp.home.databinding.LayoutDetailProductContentBinding
 import com.productapp.presentation.detail.adapter.OtherProductsAdapter
 import com.productapp.presentation.detail.adapter.ProductOptionsAdapter

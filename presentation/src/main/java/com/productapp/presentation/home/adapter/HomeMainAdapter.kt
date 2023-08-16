@@ -2,11 +2,11 @@ package com.productapp.presentation.home.adapter
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.product.common.model.home.HomeSectionAdapterItem
-import com.product.common.model.home.HomeSectionAdapterItem.Companion.VIEW_TYPE_BANNER
-import com.product.common.model.home.HomeSectionAdapterItem.Companion.VIEW_TYPE_FLEX_BOX_PRODUCTS
-import com.product.common.model.home.HomeSectionAdapterItem.Companion.VIEW_TYPE_SLIDABLE_PRODUCTS
-import com.product.common.model.home.HomeSectionAdapterItem.Companion.VIEW_TYPE_VERTICAL_PRODUCTS
+import com.productapp.domain.model.home.HomeSectionAdapterItem
+import com.productapp.domain.model.home.HomeSectionAdapterItem.Companion.VIEW_TYPE_BANNER
+import com.productapp.domain.model.home.HomeSectionAdapterItem.Companion.VIEW_TYPE_FLEX_BOX_PRODUCTS
+import com.productapp.domain.model.home.HomeSectionAdapterItem.Companion.VIEW_TYPE_SLIDABLE_PRODUCTS
+import com.productapp.domain.model.home.HomeSectionAdapterItem.Companion.VIEW_TYPE_VERTICAL_PRODUCTS
 import com.product.sideapp.home.databinding.RowHomeBannerBinding
 import com.product.sideapp.home.databinding.RowHomeFlexBoxProductsBinding
 import com.product.sideapp.home.databinding.RowHomeSlidableProductsBinding

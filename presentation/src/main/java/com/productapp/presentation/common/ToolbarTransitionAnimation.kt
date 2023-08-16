@@ -10,7 +10,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import com.google.android.material.appbar.AppBarLayout
-import com.product.common.model.detail.DetailModel
+import com.productapp.domain.model.detail.DetailModel
 import com.product.sideapp.home.R
 import com.productapp.presentation.common.extension.hide
 import com.productapp.presentation.common.extension.show

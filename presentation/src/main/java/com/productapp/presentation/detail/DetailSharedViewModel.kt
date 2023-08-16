@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.product.common.extensions.onFailure
 import com.product.common.extensions.onSuccess
-import com.product.common.model.detail.DetailModel
+import com.productapp.domain.model.detail.DetailModel
 import com.productapp.domain.usecase.GetDetailUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -23,7 +23,7 @@ class DetailSharedViewModel @Inject constructor(
     fun getDetail() {
         viewModelScope.launch {
             getDetailUseCase(Unit).onSuccess {detailData ->
-                _detailFlow.emit(detailData.data)
+                _detailFlow.emit(detailData)
             }.onFailure {
             }
         }

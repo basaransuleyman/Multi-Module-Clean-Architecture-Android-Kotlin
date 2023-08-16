@@ -34,14 +34,12 @@ class ListViewModel @Inject constructor(
         viewModelScope.launch {
             getListUseCase(GetListUseCase.Param(currentPage.value)).onSuccess { listData ->
                 delay(1000) //Backend Response delay
-                listData.data?.let {
                     _listFlow.emit(
                         GetListEvents.Success(
-                            listData = it
+                            listData = listData
                         )
                     )
                     _currentPage.value += 1
-                }
             }.onFailure {
                 _listFlow.emit(GetListEvents.Failure(IOException()))
             }

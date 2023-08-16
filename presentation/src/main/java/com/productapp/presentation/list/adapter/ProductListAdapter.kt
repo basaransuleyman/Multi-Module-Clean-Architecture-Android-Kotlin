@@ -3,7 +3,7 @@ package com.productapp.presentation.list.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.product.common.model.list.ListProductsModel
+import com.productapp.domain.model.list.ListProductsModel
 import com.product.sideapp.home.databinding.ListProductItemBinding
 import com.productapp.presentation.common.extension.setImageUrl
 

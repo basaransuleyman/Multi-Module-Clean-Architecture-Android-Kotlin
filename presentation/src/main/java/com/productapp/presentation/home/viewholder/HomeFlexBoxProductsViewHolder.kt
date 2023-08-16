@@ -4,7 +4,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.flexbox.FlexDirection
 import com.google.android.flexbox.FlexboxLayoutManager
 import com.google.android.flexbox.JustifyContent
-import com.product.common.model.home.ProductItem
+import com.productapp.domain.model.home.ProductItem
 import com.product.sideapp.home.databinding.RowHomeFlexBoxProductsBinding
 import com.productapp.presentation.home.adapter.HomeFlexBoxProductsAdapter
 

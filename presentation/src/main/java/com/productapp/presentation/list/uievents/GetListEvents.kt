@@ -1,6 +1,6 @@
 package com.productapp.presentation.list.uievents
 
-import com.product.common.model.list.ListModel
+import com.productapp.domain.model.list.ListModel
 import java.io.IOException
 
 sealed interface GetListEvents {

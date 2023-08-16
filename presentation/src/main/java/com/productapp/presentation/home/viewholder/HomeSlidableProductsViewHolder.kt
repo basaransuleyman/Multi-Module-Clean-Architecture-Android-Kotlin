@@ -2,7 +2,7 @@ package com.productapp.presentation.home.viewholder
 
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.product.common.model.home.ProductItem
+import com.productapp.domain.model.home.ProductItem
 import com.product.sideapp.home.databinding.RowHomeSlidableProductsBinding
 import com.productapp.presentation.home.adapter.HomeSlidableProductAdapter
 
