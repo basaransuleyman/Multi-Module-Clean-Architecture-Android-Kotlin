@@ -7,7 +7,7 @@ import retrofit2.Response
 
 interface DataSource {
     suspend fun getHome(): Response<HomeResponse>
-    suspend fun getDetail() : Response<DetailResponse>
-    suspend fun getList1() : Response<ListResponse>
-    suspend fun getList2() : Response<ListResponse>
+    suspend fun getDetail(): Response<DetailResponse>
+    suspend fun getListFirst(): Response<ListResponse>
+    suspend fun getListSecond(): Response<ListResponse>
 }

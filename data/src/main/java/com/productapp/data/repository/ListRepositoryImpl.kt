@@ -9,11 +9,11 @@ import javax.inject.Inject
 class ListRepositoryImpl @Inject constructor(
     private val dataSource: DataSource
 ) : ListRepository {
-    override suspend fun getList1(): Resource<ListResponse> {
-        return handleAPICall { dataSource.getList1() }
+    override suspend fun getListFirst(): Resource<ListResponse> {
+        return handleAPICall { dataSource.getListFirst() }
     }
 
-    override suspend fun getList2(): Resource<ListResponse> {
-        return handleAPICall { dataSource.getList2() }
+    override suspend fun getListSecond(): Resource<ListResponse> {
+        return handleAPICall { dataSource.getListSecond() }
     }
 }

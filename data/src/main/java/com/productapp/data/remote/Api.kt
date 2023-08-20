@@ -15,8 +15,8 @@ interface Api {
     suspend fun getDetail(): Response<DetailResponse>
 
     @GET("/basaransuleyman/suleyman-basaranoglu-json/main/list-page-paging-first")
-    suspend fun getListPaging1(): Response<ListResponse>
+    suspend fun getListPageFirst(): Response<ListResponse>
 
     @GET("/basaransuleyman/suleyman-basaranoglu-json/main/list-page-paging-second")
-    suspend fun getListPaging2(): Response<ListResponse>
+    suspend fun getListPageSecond(): Response<ListResponse>
 }

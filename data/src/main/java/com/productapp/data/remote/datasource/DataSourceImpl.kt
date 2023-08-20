@@ -19,11 +19,11 @@ internal class DataSourceImpl @Inject constructor(
         return api.getDetail()
     }
 
-    override suspend fun getList1(): Response<ListResponse> {
-        return api.getListPaging1()
+    override suspend fun getListFirst(): Response<ListResponse> {
+        return api.getListPageFirst()
     }
 
-    override suspend fun getList2(): Response<ListResponse> {
-        return api.getListPaging2()
+    override suspend fun getListSecond(): Response<ListResponse> {
+        return api.getListPageSecond()
     }
 }

@@ -19,9 +19,9 @@ class GetListUseCaseImpl @Inject constructor(
     override suspend operator fun invoke(params: ListRequestModel): Resource<ListModel> {
 
         val resource = if (params.page == PAGING_NUMBER_DEFAULT) {
-            getListRepository.getList1()
+            getListRepository.getListFirst()
         } else {
-            getListRepository.getList2()
+            getListRepository.getListSecond()
         }
 
         return withContext(dispatcher) {
