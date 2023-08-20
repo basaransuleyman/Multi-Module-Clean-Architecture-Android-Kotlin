@@ -5,7 +5,7 @@ This project has been crafted with the intention of providing a transparent view
 
 # Modul Graph 
 
-![SS1](https://i.ibb.co/Dfb56m8/ezgif-com-resize-6.png)
+![SS1](https://i.ibb.co/zFZ3Cff/ezgif-com-resize-17.png)
 
 # Contents & Libraries 
 
