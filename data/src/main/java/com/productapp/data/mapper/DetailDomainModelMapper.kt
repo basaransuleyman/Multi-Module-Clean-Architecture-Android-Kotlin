@@ -1,4 +1,4 @@
-package com.productapp.domain.mapper
+package com.productapp.data.mapper
 
 import com.product.common.extensions.DataToDomainModelMapper
 import com.productapp.domain.model.detail.DetailModel
