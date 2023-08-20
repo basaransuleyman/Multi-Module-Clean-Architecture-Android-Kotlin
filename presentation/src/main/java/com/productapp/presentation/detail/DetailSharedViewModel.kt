@@ -22,7 +22,7 @@ class DetailSharedViewModel @Inject constructor(
 
     fun getDetail() {
         viewModelScope.launch {
-            getDetailUseCase(Unit).onSuccess {detailData ->
+            getDetailUseCase().onSuccess { detailData ->
                 _detailFlow.emit(detailData)
             }.onFailure {
             }

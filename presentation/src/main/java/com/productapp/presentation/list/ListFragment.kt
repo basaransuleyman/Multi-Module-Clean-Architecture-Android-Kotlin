@@ -137,11 +137,9 @@ class ListFragment : Fragment() {
     }
 
     private fun routeActions() {
-        listAdapter?.listProductItemClickListener { route ->
-            when (route) {
-                PRODUCT_ID -> {
-                    navController.navigate(R.id.detailBottomSheetFragment)
-                }
+        listAdapter?.listProductItemClickListener { routeId ->
+            routeId?.let {
+                viewModel.handleRouteId(it, navController)
             }
         }
     }
@@ -179,6 +177,5 @@ class ListFragment : Fragment() {
     companion object {
         const val PRODUCT_LIMIT = 8
         const val TOTAL_COUNT = 16
-        const val PRODUCT_ID = "1004"
     }
 }

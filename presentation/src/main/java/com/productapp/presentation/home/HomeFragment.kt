@@ -12,7 +12,6 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.product.sideapp.home.R
 import com.product.sideapp.home.databinding.FragmentHomeBinding
 import com.productapp.presentation.common.ErrorPopupFragment
 import com.productapp.presentation.common.extension.hide
@@ -112,17 +111,9 @@ class HomeFragment : Fragment() {
     }
 
     private fun routeActions() {
-        homeAdapter?.homeBannerClickListener { route ->
-            when (route) {
-                ROUTE_TO_DETAIL -> {
-                    navController.navigate(R.id.detailFragment)
-                }
-                ROUTE_TO_LIST -> {
-                    navController.navigate(R.id.listFragment)
-                }
-                ROUTE_TO_COMPOSE_MULTI_TYPE_LAZY_COLUMN -> {
-                    navController.navigate(R.id.listLazyColumn)
-                }
+        homeAdapter?.homeBannerClickListener { routeId ->
+            routeId?.let {
+                viewModel.handleBannerRouteId(it, navController)
             }
         }
     }
@@ -134,9 +125,6 @@ class HomeFragment : Fragment() {
 
     companion object {
         const val ERROR_POP_UP_FRAGMENT_TAG = "error_popup_fragment"
-        const val ROUTE_TO_DETAIL = "101"
-        const val ROUTE_TO_LIST = "102"
-        const val ROUTE_TO_COMPOSE_MULTI_TYPE_LAZY_COLUMN = "103"
     }
 
 }

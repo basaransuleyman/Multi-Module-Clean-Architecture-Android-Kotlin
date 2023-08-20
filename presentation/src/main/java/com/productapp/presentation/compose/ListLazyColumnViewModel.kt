@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.product.common.extensions.onFailure
 import com.product.common.extensions.onSuccess
+import com.productapp.domain.model.list.ListRequestModel
 import com.productapp.domain.usecase.GetListUseCase
 import com.productapp.presentation.compose.uievent.UIEvent
 import com.productapp.presentation.compose.uistate.State
@@ -48,7 +49,7 @@ class ListLazyColumnViewModel @Inject constructor(
 
     fun getLazyColumnData() {
         viewModelScope.launch {
-            getListUseCase(GetListUseCase.Param(1))
+            getListUseCase(ListRequestModel(1))
                 .onSuccess { product ->
                     _state.update {
                         it.copy(
