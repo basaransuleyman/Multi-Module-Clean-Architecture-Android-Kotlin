@@ -1,7 +1,5 @@
 # Multi Module Clean Arch 
 
-## Continuous Integration Status
-
 ![CI Status](https://github.com/basaransuleyman/Multi-Module-Clean-Architecture-Android-Kotlin/actions/workflows/ci-cd.yml/badge.svg)
 
 
