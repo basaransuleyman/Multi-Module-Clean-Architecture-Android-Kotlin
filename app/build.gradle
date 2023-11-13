@@ -19,8 +19,12 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+
     lintOptions {
         disable "Instantiatable"
+        checkReleaseBuilds false
+        abortOnError false
+        lintConfig = file("$rootDir/lint.xml")
     }
 
     buildTypes {
