@@ -83,4 +83,7 @@ dependencies {
     kaptAndroidTest libs.hilt.compiler
     androidTestImplementation libs.compose.bom
 
- }
+    testImplementation(libs.mockk.core)
+    testImplementation(libs.mockk.android)
+    testImplementation(libs.coroutines.test)
+}
