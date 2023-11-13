@@ -37,4 +37,9 @@ dependencies {
     kapt libs.hilt.compiler
     implementation libs.android.core
     implementation libs.appcompat
+
+    testImplementation libs.junit.core
+    androidTestImplementation libs.junit.test
+    implementation libs.junit.core
+    implementation libs.coroutines.test
 }
