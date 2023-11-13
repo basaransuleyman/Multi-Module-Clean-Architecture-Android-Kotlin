@@ -1,0 +1,28 @@
+name: Android CI/CD
+
+on:
+  push:
+    branches:
+      - main  # Ana dalınızı buraya ekleyin
+  pull_request:
+    branches:
+      - main  # Ana dalınızı buraya ekleyin
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Set Up Java
+      uses: actions/setup-java@v2
+      with:
+        java-version: '11'
+
+    - name: Build with Gradle
+      run: ./gradlew build
+
+    - name: Run Tests
+      run: ./gradlew test
