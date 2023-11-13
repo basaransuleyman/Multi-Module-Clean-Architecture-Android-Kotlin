@@ -33,6 +33,7 @@ class HomeMainAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         itemList?.let {
             homeSections.addAll(it)
         }
+        //
         notifyDataSetChanged()
     }
 
