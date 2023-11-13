@@ -1,5 +1,6 @@
 package com.productapp.presentation
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -13,6 +14,7 @@ import com.product.sideapp.home.databinding.ActivityMainBinding
 import com.productapp.presentation.home.HomeSharedViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
+@SuppressLint
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
