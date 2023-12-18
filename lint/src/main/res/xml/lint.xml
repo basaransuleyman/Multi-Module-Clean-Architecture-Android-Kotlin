@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lint>
+    <issue
+        id="UseSparseArrays"
+        severity="warning" />
+    <issue
+        id="ObsoleteLayoutParam"
+        severity="error" />
+
+    <issue
+        id="NewApi"
+        severity="error" />
+    <issue
+        id="InlinedApi"
+        severity="warning" />
+
+    <issue
+        id="UnusedResources"
+        severity="warning" />
+    <issue
+        id="UselessParent"
+        severity="error" />
+
+    <issue
+        id="ContentDescription"
+        severity="error" />
+    <issue
+        id="InvalidId"
+        severity="fatal" />
+
+    <issue
+        id="HardcodedText"
+        severity="warning" />
+    <issue
+        id="MissingTranslation"
+        severity="error" />
+</lint>
