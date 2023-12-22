@@ -16,10 +16,6 @@ android {
         consumerProguardFiles "consumer-rules.pro"
     }
 
-    lintOptions {
-        disable "Instantiatable"
-    }
-
     buildTypes {
         release {
             minifyEnabled false
