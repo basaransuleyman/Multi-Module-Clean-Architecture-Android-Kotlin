@@ -69,13 +69,3 @@ dependencies {
     androidTestImplementation libs.espresso.core
     implementation libs.compose.ui.material
 }
-
-tasks {
-    jar {
-        manifest {
-            attributes(
-                    "Lint-Registry-v2" to "com.productapp.lint.naming.NamingConventionIssueRegistry"
-            )
-        }
-    }
-}
