@@ -20,11 +20,10 @@ android {
     }
 
 
-    lintOptions {
-        disable "Instantiatable"
-        checkReleaseBuilds false
-        abortOnError false
-        lintConfig = file("$rootDir/lint.xml")
+    lint {
+        checkDependencies = true
+        sarifOutput = file("../lint-results.sarif")
+        textReport = true
     }
 
     buildTypes {
@@ -48,6 +47,7 @@ android {
 }
 
 dependencies {
+    lintPublish(project(":lint"))
 
     implementation project(path: ':presentation')
     implementation project(path: ':data')

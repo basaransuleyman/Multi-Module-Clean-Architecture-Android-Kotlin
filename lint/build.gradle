@@ -27,10 +27,16 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    lint {
+        htmlReport = true
+        htmlOutput = file("lint-report.html")
+        textReport = true
+        absolutePaths = false
+        ignoreTestSources = true
+    }
 }
 
 dependencies {
-
     implementation libs.lint.api
     implementation libs.lint.checks
 
