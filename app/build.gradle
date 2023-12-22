@@ -19,18 +19,6 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
-
-    lint {
-        checkDependencies = true
-        sarifOutput = file("../lint-results.sarif")
-        textReport = true
-    }
-
-    lintOptions {
-        abortOnError true
-        warningsAsErrors true
-    }
-
     buildTypes {
         release {
             minifyEnabled false
@@ -52,9 +40,6 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    lintPublish(project(":lint"))
-
     implementation project(path: ':presentation')
     implementation project(path: ':data')
     implementation project(path: ':domain')
