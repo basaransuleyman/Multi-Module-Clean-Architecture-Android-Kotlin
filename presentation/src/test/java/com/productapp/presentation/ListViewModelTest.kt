@@ -1,6 +1,5 @@
 package com.productapp.presentation
 
-import com.product.common.utils.MainCoroutineRule
 import com.product.common.utils.MainDispatcherRule
 import com.product.common.utils.Resource
 import com.productapp.domain.model.list.ListModel
@@ -17,7 +16,6 @@ import kotlinx.coroutines.flow.toList
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.test.StandardTestDispatcher
 import kotlinx.coroutines.test.advanceUntilIdle
-import kotlinx.coroutines.test.runBlockingTest
 import kotlinx.coroutines.test.runTest
 import org.junit.Assert.assertTrue
 import org.junit.Before
@@ -33,8 +31,6 @@ class ListViewModelTest {
     @get:Rule
     val mainDispatcherRule = MainDispatcherRule(testDispatcher)
 
-    @get:Rule
-    val mainTestCoroutineRule = MainCoroutineRule()
 
     private val getListUseCase = mockk<GetListUseCase>()
     private lateinit var listViewModel: ListViewModel
