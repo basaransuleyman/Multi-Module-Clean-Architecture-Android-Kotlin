@@ -22,7 +22,7 @@ android {
 
     lint {
         checkDependencies = true
-        sarifOutput = file("../lint-results.sarif")
+        //sarifOutput = file("../lint-results.sarif")
         textReport = true
     }
 
