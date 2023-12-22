@@ -19,10 +19,6 @@ android {
         }
     }
 
-    lintOptions {
-        disable "Instantiatable"
-    }
-
     buildTypes {
         release {
             minifyEnabled false

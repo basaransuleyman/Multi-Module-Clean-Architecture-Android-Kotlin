@@ -26,6 +26,11 @@ android {
         textReport = true
     }
 
+    lintOptions {
+        abortOnError true
+        warningsAsErrors true
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -47,6 +52,7 @@ android {
 }
 
 dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
     lintPublish(project(":lint"))
 
     implementation project(path: ':presentation')
@@ -62,4 +68,14 @@ dependencies {
     androidTestImplementation libs.junit.test
     androidTestImplementation libs.espresso.core
     implementation libs.compose.ui.material
+}
+
+tasks {
+    jar {
+        manifest {
+            attributes(
+                    "Lint-Registry-v2" to "com.productapp.lint.naming.NamingConventionIssueRegistry"
+            )
+        }
+    }
 }
