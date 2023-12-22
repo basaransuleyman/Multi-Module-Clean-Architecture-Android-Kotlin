@@ -2,10 +2,8 @@
 # @keep
 compileSdk = "33"
 minSdk = "24"
-targetSdk = "33"
 androidCore = "1.10.1"
 appcompat = "1.6.1"
-material = "1.9.0"
 junitCore = "4.13.2"
 junitTest = "1.1.5"
 espresso = "3.5.1"
@@ -38,9 +36,6 @@ fragmenKtx = "1.5.7"
 [libraries]
 appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
 android-core = { module = "androidx.core:core-ktx", version.ref = "androidCore" }
-lint-api = { module = "com.android.tools.lint:lint-api", version.ref = "lintApi" }
-lint-checks = { module = "com.android.tools.lint:lint-checks", version.ref = "lintChecks" }
-material = { module = "com.google.android.material:material", version.ref = "material" }
 junit-core = { module = "junit:junit", version.ref = "junitCore" }
 junit-test = { module = "androidx.test.ext:junit", version.ref = "junitTest" }
 espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "espresso" }
@@ -67,16 +62,10 @@ navigation-fragment-ktx = { module = "androidx.navigation:navigation-fragment-kt
 navigation-ui-ktx = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigation" }
 mockk-android = { module = "io.mockk:mockk-android", version.ref = "mockkAndroid" }
 mockk-core = { module = "io.mockk:mockk", version.ref = "mockkCore" }
-ui-test-fragment = { module = "androidx.fragment:fragment-testing", version.ref = "fragmenTestingUI" }
 hilt-test = { module = "com.google.dagger:hilt-android-testing", version.ref = "hiltTesting" }
 rx-java-core = { module = "com.squareup.retrofit2:adapter-rxjava2", version.ref = "retrofit" }
 rx-java-android = { module = "io.reactivex.rxjava2:rxandroid", version.ref = "rxJava" }
-compose-ui = { module = "androidx.compose.ui:ui" }
 compose-ui-graphics = { module = "androidx.compose.ui:ui-graphics" }
-compose-ui-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4" }
-compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
-compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
-compose-ui-viewbinding = { module = "androidx.compose.ui:ui-viewbinding" }
 paging = { module = "androidx.paging:paging-runtime", version.ref = "paging" }
 compose-ui-material = { module = "androidx.compose.material3:material3", version.ref = "composeMaterial" }
 fragment-ktx = { module = "androidx.fragment:fragment-ktx", version.ref = "fragmenKtx" }
