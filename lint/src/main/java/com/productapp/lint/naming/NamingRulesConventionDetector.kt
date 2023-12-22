@@ -8,7 +8,11 @@ import org.jetbrains.uast.UClass
 
 class NamingRulesConventionDetector : Detector(), SourceCodeScanner {
     override fun getApplicableElements(): List<String> {
-        return listOf("androidx.fragment.app.Fragment", "android.app.Activity")
+        return listOf(
+            "androidx.fragment.app.Fragment",
+            "android.app.Activity",
+            "androidx.appcompat.app.AppCompatActivity"
+        )
     }
 
     override fun visitClass(context: JavaContext, declaration: UClass) {
