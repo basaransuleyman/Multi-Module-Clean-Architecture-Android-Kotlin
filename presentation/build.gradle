@@ -53,12 +53,9 @@ dependencies {
 
     implementation libs.lifecycle.ktx
     implementation libs.compose.activity
-    implementation libs.compose.bom
-    implementation libs.compose.ui
     implementation libs.compose.ui.graphics
     implementation libs.compose.ui.material
     implementation libs.fragment.ktx
-    debugImplementation libs.compose.ui.tooling
     implementation libs.compose.hilt.navigation
     implementation libs.compose.view.model
     implementation libs.compose.lifecycle
@@ -81,7 +78,6 @@ dependencies {
     androidTestImplementation libs.espresso.core
     implementation libs.hilt.test
     kaptAndroidTest libs.hilt.compiler
-    androidTestImplementation libs.compose.bom
 
     testImplementation(libs.mockk.core)
     testImplementation(libs.mockk.android)
