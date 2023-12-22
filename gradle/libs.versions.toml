@@ -1,8 +1,6 @@
 [versions]
 # @keep
 compileSdk = "33"
-lintApi = "31.2.0"
-lintChecks = "31.3.0-alpha18"
 minSdk = "24"
 targetSdk = "33"
 androidCore = "1.10.1"
