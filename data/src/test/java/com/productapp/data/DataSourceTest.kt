@@ -6,7 +6,6 @@ import com.productapp.data.remote.Api
 import com.productapp.data.remote.datasource.DataSourceImpl
 import io.mockk.coEvery
 import io.mockk.mockk
-import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.test.runTest
 import org.junit.Assert.assertEquals
 import org.junit.Before

@@ -4,6 +4,8 @@
         <ignore regexp="com.bumptech.glide.request.target.NotificationTarget" />
     </issue>
 
+    <issue id="Instantiatable" severity="ignore" />
+
     <issue id="UseSparseArrays" severity="warning"/>
 
     <issue id="NewApi" severity="warning"/>
