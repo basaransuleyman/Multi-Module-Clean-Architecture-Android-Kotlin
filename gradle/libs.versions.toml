@@ -27,7 +27,6 @@ composeGlide = "1.0.0-alpha.1"
 navigation = "2.7.6"
 mockkAndroid = "1.12.3"
 mockkCore = "1.13.4"
-fragmenTestingUI = "1.5.7"
 hiltTesting = "2.44"
 rxJava = "2.1.1"
 composeMaterial = "1.1.2"
@@ -47,7 +46,6 @@ retrofit-core = { module = "com.squareup.retrofit2:retrofit", version.ref = "ret
 retrofit-gson-converter = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
 lifecycle-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
 compose-activity = { module = "androidx.activity:activity-compose", version.ref = "composeActivity" }
-compose-bom = { module = "androidx.compose:compose-bom", version.ref = "composeBom" }
 compose-lifecycle = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "compose" }
 compose-view-model = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "compose" }
 compose-hilt-navigation = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "composeHiltNav" }
