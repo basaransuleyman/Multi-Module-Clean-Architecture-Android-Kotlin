@@ -14,7 +14,7 @@ import com.product.sideapp.home.databinding.ActivityMainBinding
 import com.productapp.presentation.home.HomeSharedViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
-@SuppressLint
+@SuppressLint("Instantiatable")
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 

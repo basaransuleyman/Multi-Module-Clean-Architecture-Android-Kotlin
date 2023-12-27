@@ -1,8 +1,8 @@
 [versions]
 # @keep
-compileSdk = "33"
+compileSdk = "34"
 minSdk = "24"
-androidCore = "1.10.1"
+androidCore = "1.12.0"
 appcompat = "1.6.1"
 junitCore = "4.13.2"
 junitTest = "1.1.5"
@@ -11,12 +11,11 @@ hilt = "2.47"
 coroutinesCore = "1.7.2"
 okhttp = "4.10.0"
 retrofit = "2.9.0"
-paging = "3.2.0"
-lifecycleRuntimeKtx = "2.4.0"
-composeActivity = "1.7.2"
-composeBom = "2023.10.01"
+paging = "3.2.1"
+lifecycleRuntimeKtx = "2.6.2"
+composeActivity = "1.8.2"
 compose = "2.6.2"
-composeHiltNav = "1.0.0"
+composeHiltNav = "1.1.0"
 viewPager = "1.0.0"
 flexBox = "3.0.0"
 shimmer = "0.5.0"
@@ -24,14 +23,13 @@ lottie = "5.2.0"
 glide = "4.15.1"
 swipeToRefresh = "1.1.0"
 composeGlide = "1.0.0-alpha.1"
-navigation = "2.4.2"
+navigation = "2.7.6"
 mockkAndroid = "1.12.3"
 mockkCore = "1.13.2"
-fragmenTestingUI = "1.5.7"
 hiltTesting = "2.44"
 rxJava = "2.1.1"
-composeMaterial = "1.1.1"
-fragmenKtx = "1.5.7"
+composeMaterial = "1.1.2"
+fragmenKtx = "1.6.2"
 
 [libraries]
 appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
@@ -47,7 +45,6 @@ retrofit-core = { module = "com.squareup.retrofit2:retrofit", version.ref = "ret
 retrofit-gson-converter = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
 lifecycle-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
 compose-activity = { module = "androidx.activity:activity-compose", version.ref = "composeActivity" }
-compose-bom = { module = "androidx.compose:compose-bom", version.ref = "composeBom" }
 compose-lifecycle = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "compose" }
 compose-view-model = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "compose" }
 compose-hilt-navigation = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "composeHiltNav" }

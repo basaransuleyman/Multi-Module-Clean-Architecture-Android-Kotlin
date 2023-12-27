@@ -6,7 +6,7 @@ import com.productapp.data.remote.Api
 import com.productapp.data.remote.datasource.DataSourceImpl
 import io.mockk.coEvery
 import io.mockk.mockk
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.test.runTest
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
@@ -24,7 +24,7 @@ class DataSourceTest {
     }
 
     @Test
-    fun `getHome returns expected response`() = runBlocking {
+    fun `getHome returns expected response`() = runTest {
         val expectedResponse = mockk<Response<HomeResponse>>()
 
         coEvery { api.getHome() } returns expectedResponse
@@ -35,7 +35,7 @@ class DataSourceTest {
     }
 
     @Test
-    fun `getDetail returns expected response`() = runBlocking {
+    fun `getDetail returns expected response`() = runTest {
         val expectedResponse = mockk<Response<DetailResponse>>()
 
         coEvery { api.getDetail() } returns expectedResponse
