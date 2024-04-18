@@ -3,7 +3,7 @@
 ![CI Status](https://github.com/basaransuleyman/Multi-Module-Clean-Architecture-Android-Kotlin/actions/workflows/continuous.yml/badge.svg)
 
 
-This project has been crafted with the intention of providing a transparent view into my approach towards software development, including my work methodologies, architectural choices, design pattern implementations, modularization strategies, code readability enhancements, utilized technologies and libraries, version control practices, and more. I'll share all flow and contents with part by part on [Medium](https://medium.com/@basaransuleyman).
+This project has been crafted with the intention of providing a transparent view into my approach towards software development, including my work methodologies, architectural choices, design pattern implementations, modularization strategies, code readability enhancements, utilized technologies and libraries, version control practices, and more. I'll share all flow and contents with [Medium](https://medium.com/@basaransuleyman).
 
 # Modul Graph 
 
