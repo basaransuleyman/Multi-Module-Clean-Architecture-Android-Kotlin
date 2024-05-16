@@ -12,7 +12,7 @@ This project has been crafted with the intention of providing a transparent view
 # Contents & Libraries 
 
 - MVVM & MVI
-- Modularization & Multi Module
+- Modularization & Multi Module App Architecture
 - Clean Architecture 
 - Jetpack Compose
 - View Binding 
