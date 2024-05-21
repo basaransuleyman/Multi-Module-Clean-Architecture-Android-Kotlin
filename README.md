@@ -16,7 +16,7 @@ This project has been crafted with the intention of providing a transparent view
 - Clean Architecture 
 - Jetpack Compose
 - View Binding 
-- Hilt 
+- Hilt
 - Retrofit
 - Navigation Component 
 - Coroutines 
