@@ -28,7 +28,7 @@ This project has been crafted with the intention of providing a transparent view
 - Hilt Android Testing
 - KotlinX Coroutines Test
 - Fragment Testing
-- Mockk 
+- Mockk  
 - Glide 
 - Lottie 
 - SwipeRefreshLayout 
